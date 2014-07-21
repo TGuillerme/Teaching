@@ -1,57 +1,94 @@
 \documentclass[a4paper,11pt]{article}
+
 \usepackage{enumerate}
 \usepackage[osf]{mathpazo}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
 \pagenumbering{arabic}
+\setlength{\parindent}{10ex}
+\linespread{1.66} % All text should be double-spaced with occasional exceptions for tables. 
+\raggedright
+
 
 \begin{document}
 
 \begin{flushright}
 Version dated: \today
 \end{flushright}
-\bigskip
 \begin{center}
 
 %Title
-\noindent{\Large \bf A quick GitHub pages tutorial}\\
+\noindent{\Large{\bf{A quick GitHub pages tutorial}}}\\
 \bigskip
 %Author
-\noindent { Thomas Guillerme - guillert@tcd.ie - http://tguillerme.github.io/}\\
+\noindent{Thomas Guillerme - guillert@tcd.ie - http://tguillerme.github.io/}\\
 
 \end{center}
 
-\raggedright
- \pagestyle{empty}
-\pagenumbering{gobble}
-
-This is a really quick tutorial on how to create GitHub pages, whether you want them for a \textbf{project page} (i.e. specific to one of your projects) or just a \textbf{home page} (i.e. just stuff about you're wonderful life).
-
+This is a really quick tutorial on how to create GitHub pages, whether you want a specific \textbf{project page} or just a \textbf{user page} (e.g. stuff about you're life).
+The idea is that GitHub allows to create a repository that is hosted as a website.
+Therefore you can interact with this repository as usual (collaboration, version control, etc...) but it will appear as a web page instead of the classical repository visualisation of GitHub.
+%Demo: Go through each step on screen (no submitting)
 \section{Generating the page}
-Dead easy, just follow these steps:
+It's dead easy\footnote{Involves just clicking.}, just follow these steps (you might have already done the two first ones!):
 \begin{enumerate}
-\item{Register on GitHub:}\\
-https://github.com/
+    \item{Register on GitHub:}\\
+    https://github.com/
 
-\item{\textit{Download a GUI client (recommended):}}\\
-\begin{itemize}
-\item{Windows: https://windows.github.com/}
-\item{Mac: https://mac.github.com/}
-\item{Linux/Nerd: You're grant, it's really easy on terminal too.}
-\end{itemize}
+    \item{\textit{Download a GUI client (recommended):}}\\
+        \begin{itemize}
+        \item{Windows: https://windows.github.com/}
+        \item{Mac: https://mac.github.com/}
+        \item{Linux/Nerd\footnote{If you're a bit more familiar with not only clicking but also copy/pasting stuff in the terminal window.}: You're grant, it's really easy on terminal too.}
+        \end{itemize}
 
-\item{Generate your page:}\\
-https://pages.github.com/
+    \item{Generate your page:}\\
+    https://pages.github.com/
 \end{enumerate}
 
 \section{Editing the page}
-Ones every step is completed, let the magic happen and just modify content depending on your mood on your computer. Then commit/push it on GitHub and it will instantly update your online content.
+\setlength{\parindent}{5ex}
+Ones every step is completed, let the magic happen and just modify the content depending on your mood straight from your computer. Then save/commit/push the modified content on GitHub and it will instantly update your on line repository.
+%Demo: Submit a dummy tutorial page containing a link to this pdf.
 
 GitHub pages are written in html language, if you're familiar with it, just have fun, if not here is a non-exhaustive list of resources:
+\par
 \begin{itemize}
-\item{Trial and error, get your hands dirty!}
-\item{http://www.w3schools.com/}
-\item{http://www.htmldog.com/guides/html/beginner/}
-\item{http://html.net/}
+    \item{Trial and error, get your hands dirty!}
+    \item{http://www.w3schools.com/}
+    \item{http://www.htmldog.com/guides/html/beginner/}
+    \item{http://html.net/}
 \end{itemize}
-
+Note that you can create pages in any other web language too.
 It's not much more complicated than that!
+
+\newpage
+
+\section{Some more details}
+\subsection{User or project page?}
+\setlength{\parindent}{5ex}
+The user page will create a new repository on GitHub and your computer containing all the web pages information and resources.
+
+The project page will link directly to one of your repositories, if you're familiar with GitHub, it's like a README file but in more fancy.
+You can generate it automatically\footnote{Involves just clicking.} or manually\footnote{Also involves a bit of copy/pasting stuff in the terminal window - https://help.github.com/articles/creating-project-pages-manually
+}.
+\par
+
+\subsection{What's in the project repository}
+
+\begin{spacing}{1.1}
+user.github.io/ \\
+     \qquad  $\rightarrow$ index.html \\
+     \qquad  $\rightarrow$ any other page.html \\
+     \qquad  $\rightarrow$ stylesheet folder \\
+     \quad \quad \qquad $\rightarrow$ .css file \\
+     \qquad  $\rightarrow$ any other folder \\
+     \quad \quad \qquad $\rightarrow$ some file \\
+\end{spacing}
+
+\subsection{Domain name?}
+If you happen to have a domain name (e.g. checkmyawesomecv.com) there's a way to do it by adding a CNAME file to your repository.
+
+\noindent{https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages}
+
 \end{document}
