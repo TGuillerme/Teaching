@@ -1,0 +1,337 @@
+#NEXUS
+[!This data set was downloaded from TreeBASE, a relational database of phylogenetic knowledge. TreeBASE has been supported by the NSF, Harvard University, Yale University, SDSC and UC Davis. Please do not remove this acknowledgment from the Nexus file.
+
+
+Generated on September 16, 2013; 15:25 GMT
+
+TreeBASE (cc) 1994-2008
+
+Study reference:
+Lambkin C.L., & Bartlett J.S. 2011. Bush Blitz aids description of three new species
+and a new genus of Australian beeflies (Diptera: Bombyliidae: Exoprosopini).
+Zookeys, 150: 231280.
+
+TreeBASE Study URI:  http://purl.org/phylo/treebase/phylows/study/TB2:S12050]
+
+BEGIN TAXA;
+        TITLE  Taxa;
+        DIMENSIONS NTAX=46;
+        TAXLABELS
+            Balaana_abscondita
+            Balaana_bicuspis
+            Balaana_centrosa
+            Balaana_efflatounbeyi
+            Balaana_gigantea
+            Balaana_grandis
+            Balaana_kingcascadensis
+            Balaana_latelimbata
+            Balaana_obliquebifasciata
+            Balaana_onusta
+            Balaana_tamerlan
+            Kapu_adelaidica
+            Kapu_corusca
+            Kapu_irwini
+            Kapu_westralica
+            Larrpana_collessi
+            Larrpana_dimidiatipennis
+            Larrpana_zwicki
+            Ligyra_bombyliformis
+            Ligyra_punctipennis
+            Ligyra_satyrus
+            Ligyra_sinuatifascia
+            Munjua_erugata
+            Munjua_lepidokingi
+            Munjua_paralutea
+            Munjua_trigona
+            Muwarna_stellifera
+            Muwarna_vitreilinearis
+            Palirika_anaxios
+            Palirika_basilikos
+            Palirika_blackdownensis
+            Palirika_bouchardi
+            Palirika_cyanea
+            Palirika_danielsi
+            Palirika_decora
+            Palirika_marginicollis
+            Palirika_viridula
+            Palirika_whyalla
+            Wurda_emu
+            Wurda_impatientis
+            Wurda_montebelloensis
+            Wurda_norrisi
+            Wurda_patrellia
+            Wurda_skevingtoni
+            Wurda_windorah
+            Wurda_wyperfeldensis
+            ;
+END;
+
+BEGIN CHARACTERS;
+[! TreeBASE Matrix URI: http://purl.org/phylo/treebase/phylows/matrix/TB2:M10675]
+
+	TITLE Australian_Exoprosopini_2003_46_taxa;
+	LINK TAXA = Taxa;
+	DIMENSIONS NCHAR=207;
+	FORMAT DATATYPE=Standard SYMBOLS= "0 1 2 3 4 5 6 7 8 9" MISSING=? GAP= -;
+	CHARSTATELABELS
+		1  head_scales / absent present,
+		2  face_scale_density / absent sparse overlapping carpet,
+		3  frons_scale_density / absent sparse overlapping carpet _distinct_dense_medial_patch,
+		4  frons_vertical_groove / absent depression groove,
+		5  frons_horizontal_depression / absent shallow distinct deep,
+		6  W_head_cf_thorax / '<' '=' '>',
+		7  'L antennae-eyes cf L scape' / '<' ? ?2x ?_4x,
+		8  L_antennal_separation_cf_L_scape / '<' ? ?2x ?_3x,
+		9  male_eye_separation_W_cf_W_OT / meet '<' '=' ?2x ?3x more_3x,
+		10  female_eye_separation_W_cf_W_OT / ?2x ?3x more_3x,
+		11  OT_to_pst_mgn_eye_cf_L_OT / ?_OT more_OT ?2x_OT ?3x_OT,
+		12  L_occiput_cf_L_OT / ?_2x less_3x ?_3x,
+		13  L_OT_to_occipital_groove / ?_L_OT ?_2x wide_more_2x,
+		14  D_occiputal_foveal_depression / no_foveal_area not_depressed shallow deep_slopes_posteriorly_at_45_degrees_to_a_short_OG_,
+		15  W_occiputal_foveal_depression / no_foveal_area not_depressed narrower_than_eye_sep wider_than_eye_sep,
+		16  apical_occipital_groove / narrow wide_rounded,
+		17  head_lateral_shape / round 'protruding_but_rounded,_blunt' conical,
+		18  L_proboscis / less_L_oral_cavity_ more_L_oral_cavity_ more_L_head more_1.5_x__L_head more_2x_L_head,
+		19  L_palps_cf_L_proboscis / rudimentary less_0.25_short '<_1_long',
+		20  setae_surrounding_oral_cavity / not_grouped grouped_laterally grouped_apically,
+		21  L_setae_below_antennae_cf_L_scape / '>' ? ?0.5,
+		22  horiz_depression_bet_antennae / 'absent-shallow' distinct deep,
+		23  W_face_over_eye_include_indent / less_1_quarter ?_half more_half,
+		24  L_eye_indent_cf_L_OT / ? '>' ?_2x,
+		25  L_eye_bisect_line_cf_L_OT / absent '<' ? ?_2x,
+		26  L_scape_cf_L_pedicel / ? ?3x more_3x,
+		27  L_PP_cf_L_pedicel / ?3x ?4x more_4x,
+		28  PP_base_shape / broad_not_round_base 'onion_-round' medially_divided_laterally cone,
+		29  L_PP_rod_cf_L_base / long_more_2x short_less_2x no_thin_rod,
+		30  'distinct apical joint PP - BSM' / absent present,
+		31  L_BSM_cf_pedicel / absent ? ?2x ?3x more_3x,
+		32  BSM_apical_hairs / absent present,
+		33  L_ASM_cf_W_BSM / '<minute_-blunt-spine' '>' '>__2x' conical_twisted_hat,
+		34  collar_Ma / 'absent-pointed' midstyle pectinate,
+		35  Scm_reflective_vest / bright very_dull_dark not_reflective,
+		36  Ma_AN / absent pointed midstyle pectinate,
+		37  L_PR_bristles_cf_PN / more_2x '>' '<' absent,
+		38  LT / bare some_hair dense_hair,
+		39  Ma_LT / absent pointed midstyle pectinate,
+		40  MT_vestiture / bare some_hair dense_hair,
+		41  L_PA__bristles_cf_Scu / absent less_0.5 ? '>',
+		42  L_thorax_cf_Scu / ?_2x ?_3x more_3x,
+		43  Scu_vest_reflective / bright very_dull_dark absent,
+		44  C1_very_long_setae / absent some dense,
+		45  L_forefemur_cf_L_coxae / ?_1.5x ?2x ?2.5x more_2.5x,
+		46  forefemoral_spines / absent short_less_W_femur long,
+		47  forefemoral_long_hairs / absent some dense,
+		48  foretibial_spicules / absent some dense,
+		49  L_foretarsi__cf_L_tibiae / ?_1 ?_0.75 more_0.5,
+		50  foretarsal_microchaetae / absent very_few_less_10 present,
+		51  foretarsal_microchaetae / absent ends_bulbous ends_slightly_bent ends_distinctly_bent,
+		52  L_fore_cf_L_mid_claw / less_claw ?_half ?_third,
+		53  midfemoral_spines / absent short_less_w_femur some_long,
+		54  midfemoral_long_hairs / absent some dense,
+		55  midtibial__spicules / absent some dense,
+		56  L_midpulvilli_cf_L_claw / ? '<' ?_half less_0.2,
+		57  midpulvilli / 'large,_flattened,_membr' small_rounded_setose 'chisel-conical',
+		58  hindfemoral_spines / absent short_less_0.5_W_femur some_long,
+		59  hindfemur_long_hairs / absent some dense,
+		60  long_hindtibial_scales / no__long_scales some_long_scales 'fluffy_-_protruding' feathery 'dense,_large,feathered',
+		61  hindtibial_spicules / absent some_spicules apical_patch dense_spicules,
+		62  hindtibial_spicules_L / absent same inner_row_longer,
+		63  L_hindpulvilli_cf_L_claw / ? '<' ?_half ?_0.2,
+		64  hindpulvilli / 'large,_flattened,_membr' small_rounded_setose 'chisel_-conical',
+		65  Patagium / absent_hairs_only present_scales,
+		66  Basicosta / absent blunt sharp,
+		67  extra_ant_apic_submarg / absent extra_apical_submarginal_cell spur_apically_dir,
+		68  R2.3_join_R4.5 / 'basalto_r-m_>_L_r-m' 'at_r-m',
+		69  R2.3_rises_from_R4.5 / acutely at_right_angles,
+		70  '2nd r-m crossvein' / absent present,
+		71  spurvein_base_R2.3 / absent bump_or_present,
+		72  R2.3_apical_loop / long_apical_loop loop_less_180 at_least_90_bend absent,
+		73  'i-r1 R2.3 to R4.5' / absent present,
+		74  'i-r1 crossvein' / absent straight slightly_sinuous distinctly_sinuous,
+		75  'spurvein i-r1' / absent bump_or_present,
+		76  'L i-r1 cf L r-m' / absent ? ?2x less_3x ?3x,
+		77  spurvein_base_R4.5 / absent bump_or_present,
+		78  spur_vein_R4 / absent bump_or_present,
+		79  R5_cf_R1_meet_wing / R5_apical_to_R1 equal R5_basal_to_R1,
+		80  'i-r2 R4 to R5' / absent present,
+		81  M1 / straight slightly_sinuous sinuous,
+		82  'L m-m cf r-m' / ?2x ?_3x more_3x,
+		83  'm-m' / straight slightly_sinuous sinuous,
+		84  'm-m  spur' / absent into_m2 into_discal crossvein_form_basal_cell,
+		85  'm-m to wing margin' / oblique parallel horizontal,
+		86  _M2 / straight slightly_sinuous sinuous,
+		87  1st_post_cell__r5_open / open 'narrow_<_r-m' just_closed 'closed_and_stalked_-_acute' 'closed_and_stalked__-obtuse',
+		88  2nd_post_cell_open / open 'closed_and_stalked_-_acute',
+		89  3rd_post_cell_open / open 'closed_and_stalked_-_acute',
+		90  'LCuA1 to dm-cu cf r-m<2x<3x' / more_3x less_3x ?2x ?,
+		91  'dm-cu' / straight slightly_sinuous 90_basally 'sinuous_-_two_turns',
+		92  'base 3rd post dm-cu' / absent spur_into_discal_cell_or_bump,
+		93  'spur into m2- 3rd post cell' / absent spur_into_m2 'cross-vein_to_CuA1',
+		94  W_anal_cf_posterior_cubital / ? ?1.5x ?2x more_2x,
+		95  anal_cell_open / open 'narrow_<_r-m' closed_at_wing_margin 'closed_and_stalked_-_acute',
+		96  anal_lobe_margin / hairs some_scales scales_dense,
+		97  anal_cell / broad_rounded rounded thin_linear petiolate,
+		98  alula_reduced / absent present,
+		99  alula__margin / hairs some_scales scales_dense,
+		100  Squamae_margin / hairs some_scales scales_dense,
+		101  Squamae_reduced / not_reduced reduced,
+		102  wing_L / ?10 '10-15' '16-20' '21-25' more_25,
+		103  wing_L_cf_W / ?3x 'long_>_3x',
+		104  L_wing_cf_abdomen / ?_3x ?_2x more_1.5x '>',
+		105  abdomen / normal_rounded narrowed_apically 'square_-_truncate_parallel_side',
+		106  abdomen_L_cf_max_W_T2 / more_2.5x less_2.5x less_2x ?1.5x ?,
+		107  abd_vest_reflective / bright very_dull_dark not_reflective,
+		108  abdominal_bristles_or_hair / dorsally_and_laterally lateral_and_apically_T7 apically absent,
+		109  'lat.bristles or hairs>T1' / dense_tufts some absent,
+		110  Ma_T1 / 'absent-pointed' simple_midstyle pectinate,
+		111  scales / absent adpressed_scales upstanding_scales long_upstanding_scale_tufts,
+		112  male_gen_twisted / 'absent-_gonocoxae_ventral' 90 180_gonocoxae_dorsal 270,
+		113  E_setae_group / not_grouped 'medio-apically' 'latero-apically' laterally,
+		114  E_setae_group / not_grouped loose strong dense_tufts,
+		115  epandrial_spines / absent short_and_broad long,
+		116  E_apically / deeply_indented 'concave-indented' truncate convex_rounded convex_pointed,
+		117  E_apicolateral_flange / absent '<_quarter_base' '<_third_base' '<_half_base' '>_half_rest_base',
+		118  E_mediolateral_flange / absent slight 'distinct_<_quarter_base',
+		119  _L_E_basolateral_flange / absent '<_quarter_base' '<_third_base' '<_half_base' ?_half_rest_base '>_base',
+		120  midW__cf__L_E_basolateral_flange / absent '<_quarter_length_base' '<_half_length' '>_half_length' '>_length',
+		121  E_posterolateral_flange / absent '<_quarter_length_base',
+		122  E_curve_basolateral_flange_curv / absent '<_quarter_base' '<_third_base' '<_half_base' '>_half_rest_base' '>_base',
+		123  E_basally_extended / absent present,
+		124  subE_sclerites / absent linear triangular quadrate single,
+		125  subE_sclerites_cf_E_W / absent '<_eighth' '<_quarter' '>quarter',
+		126  G_setae / some dense tufts,
+		127  G_setae_group / absent not_grouped apically medially laterally basally,
+		128  thick_G_setae / absent no_thick_setae some many '6-8_long',
+		129  thick_G_setae / absent no_thick_setae apically medially laterally basally,
+		130  G_subapical_indentation / absent 'slight_<_third' 'narrowed_apically_>_third',
+		131  _W_G__medial_indentation / absent '<_third' '>_third' '>_half',
+		132  G_medial_weakness / absent desclerotised_line lines_of_weakness 'division_medially-division',
+		133  G_ventral_division / line_fusion_entire line_fusion_basally fused_medially fused_basally fused,
+		134  G_medioventrally / deeply_indented indented_medially flat convex_shell,
+		135  G_ventromedial_flange / absent slight distinct,
+		136  G_mediolateral_projection / absent slight distinct recurved_hook,
+		137  G_basomedially / deeply_indented 'indented_-_concave' 'smooth_-_linear' convex truncate_projection,
+		138  H / absent present,
+		139  H_laterally / absent 'indented-bet._G-smooth' projecting with_spur with_finger,
+		140  rami / small '>_L_GS' large_recurved,
+		141  L_G_A / absent '<_GS' '>_GS',
+		142  G_plates_dorsoapically / basally_parallel angled_at_basomedial_plate,
+		143  G__dorsomedially_extensionoapic / not_extended_apically small_apical_extension 'long_apical_ext._>_GS_base',
+		144  GS / 'large_base,_long_pointed_flange' laterally_bifid simple_curved_hook medial_hook lateral_hook,
+		145  GS_basal_projection / absent small '<_GS' '=_GS',
+		146  L_AE / '<_GS' '=_GS' '>_GS',
+		147  AE_EP_separate / absent present,
+		148  EP / absent present,
+		149  EP_deep_ventral_notch / no_EP absent medial apical,
+		150  Ep_expanded_apically / no_Ep not_expanded ?_2x_neck '<_3x_neck' '>_3_x_neck',
+		151  EP_apicodorsal_plate / no_E absent apicodorsal_plate,
+		152  Ep_medioventral_projection / no_E absent above_AE below_AE,
+		153  Ep_lateroapical_lobes / no_E absent rounded_dorsally _pointed_dorsally,
+		154  Ep_lateral_proj_laterally / no_E absent lateral,
+		155  Ep_medial_proj._laterally / no_E absent medial,
+		156  Ep_pair_ventral_projections / no_E absent medial_below_AE apical,
+		157  L_Ep / no_E '<_GS_base' '>_GS_base' '>_G_margin',
+		158  EP_recurved_apicomedial_project / no_E absent recurve_apicomedial_proj,
+		159  EP_recurved_apicomedial_p.2 / no_E absent apex_recurved_lateral_view,
+		160  EP_apical_spicules / no_E absent present,
+		161  B_expanded / not_expanded round swollen_spherical bilobed,
+		162  lateral_AE_A / spoon_convex_up spoon_concave linear ABSENT,
+		163  L_lateral_AE_A / '<_L_GS' '<_G_margin' '=_G_margin' absent,
+		164  anterior_arm_AE / spoon_convex spoon_concave narrow_wedge linear,
+		165  anterior_arm_AE / '<_B' '_=_L_GS' '<_G_margin' to_G_margin,
+		166  EJ_A / 'raquet-round' linear,
+		167  L_EJ_A / within_G '=_G' '>_G_<_L_GS' '>_G_>_L_GS',
+		168  AC_spines / 3_prs 4_prs 5_prs '>_5_prs' '>_10_prs',
+		169  AC_spines_apically / thin_tapering broader_spoon_shaped,
+		170  T_9.10_sclerites / 1_sclerite 3_sclerites,
+		171  T_9_dorsal_lacuna / absent present,
+		172  T_8_dorsal_lacuna / absent present,
+		173  T8_hair / apical_half apical_half_bare_medially apical_edge apicolateral_edge,
+		174  T8_laterally / not_indented indented_arms,
+		175  T_8_A_divided_medially / not_divided slightly distinctly_?_half_width,
+		176  T_8_A_lateral_projections / absent slight not_linear linear no_A,
+		177  T_8_A_L_cf_medial_W / absent 'margin_thickened,_sclerotised' ?quarter ?half '<' ? '>_2x' ?_3x,
+		178  T_8_A_internal_structure / absent linear quadrate_plate no_A,
+		179  S8_sclerites / 1_linear_2_round 1_linear_2_round_1_medial U_shaped_2_triangular 2_round sheet,
+		180  furca / u_shaped_furca _3_separate_sclerites 2_rods,
+		181  SP_tube / 'short_<_third_L_pump' present 'long_>_x8_Lpump',
+		182  basal_endplate / absent small med large,
+		183  basal_endplate / absent 'simple-thin_processes' thick_processes funnel,
+		184  pump / short_pump very_long_pump,
+		185  long_pump_papillae / no_long_papillae unpigmented pigmented,
+		186  pump_processes_basally / no_processes short_processes long_papillae,
+		187  pump_processes_medially / no_processes short_processes long_papillae,
+		188  pump_processes_apically / no_processes short_processes long_papillae,
+		189  apical_endplate / large med small absent,
+		190  apical_endplate / absent 'simple-_thin_processes' thick_processes funnel double,
+		191  SP_R / L?w 'L>w' 'L>2w' 'L>4w' 'L>6w' 'L>8w' 'L>30w',
+		192  SP_basal_sclerotised_plate / absent basal_sclerotised_plate,
+		193  tube_SP_R_to_pump / absent present long,
+		194  SP_R_shape / round_square oval 'CHK_pear-expands_apically' long expanded_basally,
+		195  SP_end / rounded_blunt nipple narrowed knob,
+		196  SP_round_basal_bulb / no_round_MB _round_MB,
+		197  SP_R__pigmented / _unpigmented pigmented basally_unpigmented,
+		198  SP_long_medial_tube / no_medial_tube tube_medially,
+		199  long_memb._base / no_long_base long_MB,
+		200  SP_long__MB_basally_swollen / no_long_base symmetrically asymmetrically,
+		201  SP_MB_rings / no_MB_rings MB_ring MB_long_collar,
+		202  SP_R_to_pump / symmetrical asymmetrical,
+		203  SP_R_medially_bent / absent bent_reservoir,
+		204  SP_R_apically_bent / absent tip_only,
+		205  tubules / absent present,
+		206  spermathecae_R_walls / thin_unsclerotised thick_scleotised,
+		207  spermathecae_R_walls / no_dimples with_dimples,
+		;
+
+MATRIX
+[                                     10        20        30        40        50        60        70        80        90        100       110       120       130       140       150       160       170       180       190       200       210     ]
+[                                      .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .         .     ]
+Balaana_abscondita            112020024122233121221021311321200122122221221022122122112102221212011002120300201210121003100112002201010321011122010132100132333013110011121021110121121121311110222031000021023140221022211141030110001000110
+Balaana_bicuspis              111020014221233121221011322321300122022221220022121121122101222212011002120400202220121003100212002201010321011121010142000132333013310011121011100121121211311210122021000021114240122022211150131110001000110
+Balaana_centrosa              112030014132233121221011322321301122122221220022221222022102222212011002120300201210121003200112012202110321011123220042000132333013310011111021100121121121211210122030000021104240122022212150030110001000110
+Balaana_efflatounbeyi         123010034?1012??10211?113123212001?2122221?1000212112222210132221?0110021304002022201220023001121022?20111?1010?12?10042021122{35}3{35}02???1001211??111012212121131113012202???????????????????????????????????????0
+Balaana_gigantea              112020124132233121221011312321300122122221220122221112012101222212011002120400202210120003300212012203110321011121020153000322333023320001112021100121121111211100222031000021112240122022211150030110001000110
+Balaana_grandis               133000115221222021222011322321200122122221211102221210122201322212011002120400201210011002210211001201102421011111021042000431333033100001212001200122122221112100223032000021012240132021210121030110000100110
+Balaana_kingcascadensis       113020023?21233121221011322321200122122221221022221122022201222212011002120300201210021003100112002201110321011122020053021132333023300011122021110121121111311110222030000021122140222022212150030110001000110
+Balaana_latelimbata           112010023021133121221011311321200122122221220022221112022102222212011002120300201210121003300112002201010321011121020043000132333023300011111021200121121111211110222031000021113240121011211150030110001000110
+Balaana_obliquebifasciata     123010024?212???21221?21321321200122022221220001121221122201??22120110021204002012100110023001121022010104210111310210320004113230231?1001311??021012212321121113012302????????????????????????????????????????
+Balaana_onusta                133000124121233121222011222321200122123221210002221110022102322212011002130300201210121003300212002201010321111122010153000231333023300011201021200122121121311100122021000021123140222022212141030110002100110
+Balaana_tamerlan              111011125222211110210010312321100122122221210022121120222101322212011002130400202220124002100112002201111321111121020043000110300013310011222021200122112211312110122022?00021104240112022202130232010120000100
+Kapu_adelaidica               112030014121233121221010210321200122122221221022221022012200222212011002120300201210120003100112012201010321011122011043000132333033322201121021110121122221311110122020000021013140222022212110100110001100110
+Kapu_corusca                  112030023121233121221010321321300122122221221022121022022101222212011002120300202220120003100122012201010321011122021154000132333033322201121021100121122221311111122020000021113040122021212100100110001100110
+Kapu_irwini                   112032023121233121220011211321300122122221222022121122022100222212011002120300202220120003100112012201010321011122021143000132333023322201121021100122122221211200222020000021103140122022212100100110001100110
+Kapu_westralica               112030124121133120221010211321200122022231221022121022122201222212011002120400201210120003200112012201010321011122021053000132333033322201121021110121122221311111122020000021103040122012212100100110001100110
+Larrpana_collessi             112030013?32233121221011312321300122122221220022121122022102222212011002120300202110121003200112002202111321012122021054000432433033302201221021100121122221311110122031000121013140112011212110100100002100110
+Larrpana_dimidiatipennis      11201001311013312122202031132????12212223122012222102201210122??12011002120400201120011003200112002201010421011123122054030122333031202101121021100121122221311110222031000021104040122011212110001110001000010
+Larrpana_zwicki               112010023?2223312122001031232130012212222122102212102201220022221201100212030020111002100321011211220201132101212101015401113233303330211122102110012211221121112012203????????????????????????????????????????
+Ligyra_bombyliformis          122010024022232121221011211321300122022221221022122122122201222212011002130200211220123003200212002202110421011123200053020322535023102111121021100122121111311110123031000021012140232012211100100110001100110
+Ligyra_punctipennis           112010014121232121221010222321300122022231220122121122222201222212111003130200211110121002200222002202110421011123200053000422535033102111111021100122121111311110123032000021012140132021211110001110001100110
+Ligyra_satyrus                102030014122133121221011311321400122022221220022221022132201223212011002110200211220121002100212102202111321010123200252020121333013300011111021110123121211311110123033000021107240122022211100100111002100110
+Ligyra_sinuatifascia          111020013121132121221010221321400122022231220022221022022202222212011002120200211110121003100312002201111321011123222253050332{345}3{345}033302311121021200122221211211210123032000021013140122011211100000110001100110
+Munjua_erugata                112020013121133121221010222321300122122221221022221112022101222212011002120400201210021003100122002202110321011122020053000132333033300001222021100122121121311100223030000021103040222011212100100100001100110
+Munjua_lepidokingi            111030014132233122221011310321300122122221221122121020122202222212011002110300201210121003100112102201110321011121020053000122333033111001222011100121121221211110223030000021104040212011111111101110001000110
+Munjua_paralutea              122020014132232121221011212321200122122221220122121112022101222212011002120300202100121003100112002202011321011121020153010122333033311001222021100121121111311100123031000021213240121011212110101110001100110
+Munjua_trigona                112030123021133121221011221321400122122221220022221012122101222212011002120300201210021003200122002202011321011100010022000432333033121001421011100121121121211130223031000021013240122011211111000010001000110
+Muwarna_stellifera            112010123021232121221011210321300122122221220022221112022101222212011002120400202220021003200112002202010321012121220254040332333033102201221021200122112211211130123032000021014140122011212100001110001100110
+Muwarna_vitreilinearis        112021013021132121221011210321301122122221221012222112122101222212011002130400201220121003210122002201010321111121011143010332333033322101121021200121112221311110123031000021025140122022212210101110001100110
+Palirika_anaxios              111022024?2113312122101131132130110212222102002222111202210132221201100213030020100001100330011210220201130101012222100000122134503330101122102110012211112121110022203????????????????????????????????????????
+Palirika_basilikos            11203003302123312022101031232140011212222112102212121202210132221201100213040{01}2001000210033001{123}2002204111301010122231022001421335033101011221011100122111121221100222032000021012040222021210100000110001000110
+Palirika_blackdownensis       111030013?2013312122101131132140010212222102001212111202210132221201100213040020101001100330011211220201130101012223003200132134503330211122102111012311122121110022203????????????????????????????????????????
+Palirika_bouchardi            121030013031233121221010311321300112122221021022121112022101322212011002131300200100021003300112102201101311010122221053101221345023111011211021100122111121211100223032000021132240222011211100000110001000110
+Palirika_cyanea               111020023122133121221011312321301112122221220022121112022101322212011002130400201000011003300212102202111311010121020000001221345030101011221021110122111221211100223032000021021040222022210100000110001000110
+Palirika_danielsi             111020023?2123312122101132132130010212222102002222111202210132221201100213040020010002100330011200220311130101012222102200142134503310001122102112012211112131110022203????????????????????????????????????????
+Palirika_decora               111031023121133121222010311321300102022221020022121112022101222212011002120300201010011003301222002202011301010121031043001322{35}4{35}033311001221021200122121221221110223032000021102040221012211100000110001000110
+Palirika_marginicollis        112020024121133121221010310321200102122221020012121112022102322212011002130300200110011003300112112201101301010122230032101321345033301011221011110123111221211100222031000021212040222021210100000110001000110
+Palirika_viridula             101030023121133120221010311321300102122221020012121112022101322212011002130400200100021003300222002203111301010121030000001421345033101011221011100123111121211110223032000021022040222021210100000110001000110
+Palirika_whyalla              112030013122233120221011311321300102122221020022121112022101322212011002131400200100021003300212002203111201010122230042001321345033101011221021100122111221211100223032000021212040222021210100000110001000110
+Wurda_emu                     112030014110132122221020212321100122122221220012121212022102222212011002120400201210120003100112002201110321011121010043000132333033101001121011200121122221211110222031000021113140122021211100000110001100110
+Wurda_impatientis             133020024121233121210011110321200122122221221022121022022202222212011002130400201210120002100111102201111321011100010044000122333033102201221021110123121221311100122030000021125040112021212110101110001100110
+Wurda_montebelloensis         113030023021132121221011210321400122122221221022221022022102222212011002130400202220120003100112002201110421011121010043000132333023302101321021210121122121311210222030000021014040121011212110100110001100110
+Wurda_norrisi                 112020023022133121220010211321400122122221220012121022022202222212011002120200201210121003100112002201110321011100010043000122333033102201121011210123121121311100122030000021126140112021212110101110001100110
+Wurda_patrellia               113030024?2013212122101211132120012212222122102212121001210222221201100213040020222012000310011200220011132101112102014300013233302310210112102120012112222131111022203????????????????????????????????????????
+Wurda_skevingtoni             133020013?2123312121101011032130012202223122000212112202220222221201100212020020121012100210021110220111132101210001014400013233303330221112101111012312112131111022202????????????????????????????????????????
+Wurda_windorah                122020013120132122221010312321200122122221220022123212022102221212011002120400202210121003300112002201011321011121010243010422333033322201321011100121122221211100222030000021005140111022212100000110001100110
+Wurda_wyperfeldensis          11203?013101232121221010221321300122122221220022121220012102221212011002120300201210121003300112002201111321011121010043000132333033102101221021210122122121311210222030000021014040121011211210100110001100110
+;
+END;
+

@@ -1,0 +1,113 @@
+1 - download the two sets of matrices + windows translator
+(12 primates)
+(100 all)
+
+
+2 - Open in R one matrix; show the problem of counting the states
+
+
+3 - Manually (excel) change the states for one character
+
+
+4 - Use terminal. How to open it.
+
+
+5 - Navigate on the terminal and create a folder
+cd
+ls
+echo
+
+
+6 - Copy the matrix in the folder
+mkdir
+cp
+rm
+
+
+7 - Extract the name
+grep
+tr
+sed
+#####
+grep -A 5 'Study reference:' <MATRIX>.nex > <MATRIX>.nam.tmp
+tr '\n' ' ' < <MATRIX>.nam.tmp > <MATRIX>.name.tmp
+sed 's/Study reference: //g' <MATRIX>.name.tmp | sed 's/  TreeBASE Study URI:.*//g' > <MATRIX>.name
+
+
+8 - Extract the number of taxa
+grep 'DIMENSIONS NTAX=' <MATRIX>.nex > <MATRIX>.ntax.tmp
+sed 's/DIMENSIONS NTAX=//g' <MATRIX>.ntax.tmp | sed 's/;//g' | sed 's/ //g' > <MATRIX>.ntax
+
+
+9 - Asigning a variable
+$
+let
+###
+NTAX=$(sed -n '1p' <MATRIX>.ntax)
+let "NTAX += 2"
+
+10 - Extact the matrix
+grep -A "$NTAX" 'MATRIX' <MATRIX>.nex > <MATRIX>.mat.tmp
+sed '1,3d' <MATRIX>.mat.tmp | sed 's/.* //g' | sed 's/{..}/?/g' | sed 's/{...}/?/g' | sed 's/{....}/?/g' |sed 's/{.....}/?/g' | sed -e 's/\(.\)/\1 /g' > $<MATRIX>.mat
+
+
+11 - Extracting the citations
+for
+for f in *.name ; do paste $f >> citations.txt ; done ; 
+
+
+12 - Laaaaaaazzynessssss
+Writing a script
+sh
+###
+echo "##########################
+#Transforming nexus morphological matrices to be read by CharactersStates.R
+##########################
+#Generates n matrices to be read by CharactersStates.R
+#Generates a citation file
+##########################
+for f in *.nex
+ 
+do
+
+prefix=$(basename $f .nex)
+
+echo ${prefix}
+
+
+#Extracting the reference name
+grep -A 5 'Study reference:' ${prefix}.nex > ${prefix}.nam.tmp
+tr '\n' ' ' < ${prefix}.nam.tmp > ${prefix}.name.tmp
+sed 's/Study reference: //g' ${prefix}.name.tmp | sed 's/  TreeBASE Study URI:.*//g' > ${prefix}.name
+
+
+
+
+
+#Extracting the number of taxa
+grep 'DIMENSIONS NTAX=' ${prefix}.nex > ${prefix}.ntax.tmp
+sed 's/DIMENSIONS NTAX=//g' ${prefix}.ntax.tmp | sed 's/;//g' | sed 's/ //g' > ${prefix}.ntax
+
+NTAX=$(sed -n '1p' ${prefix}.ntax)
+let "NTAX += 2"
+
+#Extracting the matrix
+grep -A "$NTAX" 'MATRIX' ${prefix}.nex > ${prefix}.mat.tmp
+sed '1,3d' ${prefix}.mat.tmp | sed 's/.* //g' | sed 's/{..}/?/g' | sed 's/{...}/?/g' | sed 's/{....}/?/g' |sed 's/{.....}/?/g' | sed -e 's/\(.\)/\1 /g' > ${prefix}.mat
+
+done
+
+
+for f in *.name ; do paste $f >> citations.txt ; done ; 
+
+
+#Cleaning temporaries
+rm *.name.tmp
+rm *.nam.tmp
+rm *.ntax.tmp
+rm *.ntax
+rm *.mat.tmp
+rm *.name" > MatRead.sh
+
+
+13 - Using R

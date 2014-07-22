@@ -1,0 +1,168 @@
+#NEXUS
+[!This data set was downloaded from TreeBASE, a relational database of phylogenetic knowledge. TreeBASE has been supported by the NSF, Harvard University, Yale University, SDSC and UC Davis. Please do not remove this acknowledgment from the Nexus file.
+
+
+Generated on September 16, 2013; 15:19 GMT
+
+TreeBASE (cc) 1994-2008
+
+Study reference:
+Labarque F.M., & Ramirez M.J. 2012. The placement of the spider genus Periegops and
+the phylogeny of Scytodoidea (Araneae: Araneomorphae). Zootaxa, 3312: 1-65.
+
+TreeBASE Study URI:  http://purl.org/phylo/treebase/phylows/study/TB2:S12227]
+
+BEGIN TAXA;
+        TITLE  Taxa;
+        DIMENSIONS NTAX=13;
+        TAXLABELS
+            Ariadna_boesenbergi
+            Drymusa_capensis
+            Drymusa_rengan
+            Drymusa_serrana
+            Hypochilus_pococki
+            Kukulcania_hibernalis
+            Loxosceles_reclusa
+            Loxosceles_rufescens
+            Periegops_suteri
+            Pholcus_phalangioides
+            Scytodes_globula
+            Sicarius_rupestris
+            Stedocys_leopoldi
+            ;
+END;
+
+BEGIN CHARACTERS;
+[! TreeBASE Matrix URI: http://purl.org/phylo/treebase/phylows/matrix/TB2:M11125]
+
+	TITLE Periegops_and_Scytodoidea;
+	LINK TAXA = Taxa;
+	DIMENSIONS NCHAR=102;
+	FORMAT DATATYPE=Standard SYMBOLS= "0 1 2 3 4" MISSING=? GAP= -;
+	CHARSTATELABELS
+		1  legs_autospasy_line_configuration / coxa_trochanter patella_tibia,
+		2  metatarsal_trichobothria_number / one_or_two three_or_more,
+		3  trichobothrial_base_hood_texture / smooth with_transverse_ridges,
+		4  trichobothrial_base_margin_shape / entire broadly_notched crenulate,
+		5  tibial_emerit_glands / absent present,
+		6  metatarsi_tarsi_I_II_spatulate_setae / absent present,
+		7  tarsus_basal_third_cuticle_sclerotization / sclerotized unsclerotized_ring,
+		8  tarsus_segmentation / entire pseudosegmented,
+		9  tarsal_organ_conformation / exposed capsulate,
+		10  tarsi_proprioceptor_bristles / absent present,
+		11  tarsi_distal_end_segmentation / entire distal_articulation_delimiting_onychium,
+		12  inferior_tarsal_claw / present absent,
+		13  'proclaws I-II dentition' / single double,
+		14  paired_tarsal_claws_I_II_length / similar proclaw_enlarged,
+		15  tarsal_cuticle_texture / fingerprint smooth discrete_cells,
+		16  female_palpal_femoral_thorns / absent present,
+		17  female_palp_setae_tip_shape / acute clavate,
+		18  female_palpal_claw / present absent,
+		19  calamistrum_setae_rows_number / two one three,
+		20  thoracic_region_height_relative_height_PLE / similarly_elevated twice_forming_dome,
+		21  clypeal_hood / absent present,
+		22  cephalic_region_anterior_margins_configuration / separated prolonged_between_clypeus_endites,
+		23  chelicerae_paturon_interaction / free fused,
+		24  paturon_mesal_surface / concave straight_or_convex,
+		25  chelicerae_promarginal_teeth / present absent,
+		26  chelicerae_peg_teeth / absent present,
+		27  chelicerae_medial_lamina / absent present,
+		28  chelicerae_medial_lamina_shape / triangular_and_continuous acute_and_separated_deep_depression,
+		29  chelicerae_promarginal_lobe / absent present,
+		30  chelicerae_promarginal_lobe_setae_shape / 'filiform, long' 'conical, small',
+		31  chelicerae_promarginal_lobe_setae_distribution / dispersed in_a_basal_row,
+		32  chelicerae_gland_elevation / not_elevated on_a_mound,
+		33  female_chelicerae_stridulatory_ridges / absent present,
+		34  female_chelicerae_stridulatory_ridges_configuration / few_large_and_well_spaced_ridges long_series_minutes_ridges shallow_multiple_scales,
+		35  cheliceral_fang_venom_outlet_position / distal basal,
+		36  cheliceral_fang_venom_outlet_orientation / posterior anterior,
+		37  anterior_median_eyes / present absent,
+		38  labrum_lateral_posterior_protuberances / absent present,
+		39  serrula / absent present,
+		40  serrula_teeth_rows / multiple single,
+		41  sternum_sigilla / present absent,
+		42  labium_and_sternum_junction_configuration / free_or_separated_by_partially_membranous_suture fused,
+		43  venom_gland_position / endocheliceral extends_into_carapace,
+		44  'coxal glands duct, shape' / convoluted simple,
+		45  midgut_diverticula_chelicerae / present absent,
+		46  pharynx_dorsal_M1_muscle_origin / carapace rostrum,
+		47  fifth_median_opisthosomal_endosternite / present absent,
+		48  intestine_shape / M_shaped straight_or_only_curved,
+		49  heart_ostia_pair_number / four three two,
+		50  third_dorsoventral_abdominal_muscles / present absent,
+		51  anterior_respiratory_system_configuration / 'book-lungs' tracheae,
+		52  posterior_respiratory_system_lateral_structures_conformation / 'book-lungs' lamellae lateral_tracheae,
+		53  posterior_respiratory_system_opening_or_3rd_opisthosomal_entapophyses / about_midway_between_both just_behind_epigastric_furrow just_anterior_to_spinnerets,
+		54  posterior_respiratory_system_spiracles_or_origin_of_3rd_opisthosomal_entapophyses / separate contiguous fused,
+		55  posterior_respiratory_system_3rd_opisthosomal_entapophyses / soft_flat_or_absent elongated,
+		56  posterior_respiratory_system_shape_of_fused_3rd_opisthosomal_entapophyses / short_slender elongated_broad,
+		57  posterior_respiratory_system_3rd_opisthosomal_entapophyses_conformation / muscles_apodemes median_tracheae,
+		58  posterior_respiratory_system_transverse_furrow_between_3rd_opisthosomal_entapophyses / present absent,
+		59  posterior_respiratory_system_inter_tracheal_canal / absent present,
+		60  posterior_respiratory_system_lateral_booklungs_or_tracheae / present absent,
+		61  posterior_respiratory_system_lateral_tracheae_shape / simple branched,
+		62  supra_anal_organ / absent present,
+		63  male_epiandrous_spigots / present absent,
+		64  tartipores / absent present,
+		65  cribellum / present absent,
+		66  cribellum_configuration / entire divided,
+		67  cribellum_spigots_shape / strobilate claviform,
+		68  ALS_articles_number / three two,
+		69  ALS_anterior_hook / absent present,
+		70  ALS_anteromedian_setae / dispersed in_a_single_row,
+		71  female_ALS_MAP_gland_spigots_number / more_than_three three two one_plus_nubbin one,
+		72  'ALS MAP gland spigots, arrangement' / clustered dispersed,
+		73  ALS_piriform_shaft / narrow broadened,
+		74  ALS_MAP_gland_spigots_aperture / constricted elogated,
+		75  PMS_shape / rounded_or_digitiform tetrahedral,
+		76  PMS_gland_spigot_bases_interaction / free fused_forming_a_ring,
+		77  PMS_anteromedian_surface_setae_shape / straight_plumose bent_thick,
+		78  PMS_mesal_surface_spicules / absent present,
+		79  PMS_mAP_gland_spigots / absent present,
+		80  female_PMS_mAP_number / more_than_two two one_plus_nubbin one,
+		81  cylindrical_gland_spigots / absent present,
+		82  paracribellar_spigots / absent present,
+		83  PLS_setal_pit / absent present,
+		84  female_PLS_aciniform_gland_spigots / present absent,
+		85  female_PLS_aciniform_gland_spigots_number / more_than_one one,
+		86  PLS_aciniform_gland_spigots_arrangement / dispersed in_single_packed_line,
+		87  PLS_modified_spigots / absent present,
+		88  female_PLS_aggregate_gland_spigots / absent present,
+		89  tibia_retrolateral_process / absent present,
+		90  cymbium_paracymbium / absent present,
+		91  bulb_tegulum_and_subtegulum_interaction / separate fused,
+		92  bulb_conductor / present absent,
+		93  bulb_median_apophysis / present absent,
+		94  fertilization_duct / absent present,
+		95  gonopore_position_relative_to_epigastric_fold / gonopore_on_epigastric_fold gonopore_advanced_from_epigastric_fold,
+		96  posepigastric_foveae / absent present,
+		97  cribellate_band_axial_lines / present absent,
+		98  cribellate_band_reserve_warp / present absent,
+		99  cribellate_band_profile / uniform puffed,
+		100  cribellate_fibrils_nodules / absent present,
+		101  posture_on_web / inverted erect,
+		102  cribellate_combing_movements_leg_support / fixed_leg_III mobile_braced_leg_IV,
+		;
+
+MATRIX
+[                                 10        20        30        40        50        60        70        80        90        100     ]
+[                                  .         .         .         .         .         .         .         .         .         .     ]
+Ariadna_boesenbergi       001000000000001000?00001000?0??00?001011101?????2?0210??0?1010101??0004?000000130?00000000111000????1?
+Drymusa_capensis          0000?0000010101101?00011001010101301101110????????020210001000001??000200010010?0?00000000111000????0?
+Drymusa_rengan            0000?0000010100101?00011001011101301101110????????020210001000001??000200010010?0?001?0000111000????0?
+Drymusa_serrana           00???000?01010?101?000110010111013011011101???????0202100010000?1??000200010010?0?00000000111000????0?
+Hypochilus_pococki        ?00000010000000000000000000?0??00?000010100001000000001?0000?000000000000010000?0000001001000000000000
+Kukulcania_hibernalis     1100000{01}1000001000200011101110000?00001101?1???01001001?0010?0000110011100100013010000000011100000?010
+Loxosceles_reclusa        00000000001100?1?1?000111011???013??1011101?????1?020211001000?01??1004?011?000?0?10000000111000????0?
+Loxosceles_rufescens      0000?0000011001101?00011101111101300101110?1??????020211001000001??1004?011?000?0?10000000111000??????
+Periegops_suteri          0000?0000010101101?00011001010101301101110????????020210001000001??000300010010?0?00000000111000??????
+Pholcus_phalangioides     00000001101000?001?0001110100??00?0000111?1?????1?0?01000??1?0001??1004?101010130?01????0?11?000????0?
+Scytodes_globula          0000?0000010100111?1001110111000111?101110????????020210001000001??000300010010?0?001?0000111001????0?
+Sicarius_rupestris        0000?0000001001101?00011101111101200100?10????????0?021100?1?0001??100??0000000?0?00000000111000??????
+Stedocys_leopoldi         0000?0000010100111?1001110111000111?101110????????020210001000001??000200010010?0?001?0000111000??????
+;
+END;
+
+BEGIN ASSUMPTIONS;
+	WTSET * UNTITLED = 1: 1-102 ;
+END;

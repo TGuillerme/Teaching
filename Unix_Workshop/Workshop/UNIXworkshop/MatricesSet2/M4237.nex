@@ -1,0 +1,242 @@
+#NEXUS
+[!This data set was downloaded from TreeBASE, a relational database of phylogenetic knowledge. TreeBASE has been supported by the NSF, Harvard University, Yale University, SDSC and UC Davis. Please do not remove this acknowledgment from the Nexus file.
+
+
+Generated on September 16, 2013; 15:20 GMT
+
+TreeBASE (cc) 1994-2008
+
+Study reference:
+O'leary M. 1999. Parsimony analysis of total evidence from extinct and extant taxa,
+and the cetacean-artiodactyl question. Cladistics, 15(3): 315-330.
+
+TreeBASE Study URI:  http://purl.org/phylo/treebase/phylows/study/TB2:S10029]
+
+BEGIN TAXA;
+        TITLE  M4498;
+        DIMENSIONS NTAX=37;
+        TAXLABELS
+            Agriochoerus
+            Ambulocetus
+            Andrewsarchus
+            Ankalagon
+            Archaeotherium
+            Arctocyon
+            Balaenoptera_edeni
+            Basilosaurus
+            Camelus_dromedarius
+            Diacodexis
+            Dissacus
+            Dorudon
+            Elomeryx
+            Eoconodon
+            Equus_caballus
+            Hapalodectes
+            Harpagolestes
+            Hexaprotodon_liberiensis
+            Hippopotamus_amphibius
+            Hyopsodus
+            Hyracotherium
+            Meniscotherium
+            Mesonyx
+            Ovis_aries
+            Pachyaena
+            Pakicetus
+            Phenacodus
+            Poebrotherium
+            Protocetidae_sp._Cross_Whale
+            Protocetus
+            Remingtonocetus
+            Sinonyx
+            Sus_barbatus
+            Synoplotherium
+            Tapirus_terrestris
+            Tragulus_javanicus
+            Tursiops_truncatus
+            ;
+END;
+
+BEGIN CHARACTERS;
+[! TreeBASE Matrix URI: http://purl.org/phylo/treebase/phylows/matrix/TB2:M4237]
+
+	TITLE Morphology;
+	LINK TAXA = M4498;
+	DIMENSIONS NCHAR=123;
+	FORMAT DATATYPE=Standard SYMBOLS= "0 1 2 3" MISSING=? GAP= -;
+	CHARSTATELABELS
+		1  Subarcuate_Fossa / present absent,
+		2  shape_Tegmen_Tympani / uninflated inflated hyperinflated,
+		3  Anterior_Proc_Petr / absent present,
+		4  Tensor_Tympani_Fossa / shallow 'circular pit, no groove' 'circular pit, anterior groove' long_groove_between_tegmen_tymp,
+		5  transpromontorial_sulcusICA / present absent,
+		6  Stapedial_Groove / present absent,
+		7  Mastoid_process / exposed_externally not_exposed_posteriorly,
+		8  Stylomastoid_Foramen / complete incomplete,
+		9  Facial_Nerve_Sulcus / absent 'ant. wall = squamosal' ant_wall_mas_of_petr 'ant. wall = meat. tube ect',
+		10  'Pars cochlearis/Basioccpital' / present absent,
+		11  Ectotympanic_Bulla / ring 'medial edge = bulla',
+		12  Pachyo_Bulla / absent present,
+		13  Lat_furrow_Bulla / absent present,
+		14  Med_furrow_Bulla / absent median_notch_on_posterior_rim prominent_AP_oriented_furrow,
+		15  Art_Bulla_to_Squamosal / 'contact broad, with medial pgp' cirucular_facet_on_short_entogl contact_with_crest_of_entogleno contact_absent,
+		16  'ECtoTymp/Exocc contact' / absent present,
+		17  Sigmoid_Process / absent present,
+		18  Sigmoid_process_shape / thin_and_transverse_plate broad_and_flaring,
+		19  Ectotympanic_meatal_floor / absent present_but_short present_and_long,
+		20  External_Auditory_Meatus_squamo / absent_or_shallow elongate,
+		21  'Basioccipital crests (falcate p' / absent present,
+		22  Internal_Carotid_Foramen / absent 'present, paired' falcate_processes,
+		23  'Post- Glenoid Foramen' / 'present, squam, post to pgp' 'present, med to petsq sut' absent,
+		24  PRESENCE_For_ram_sup. / present absent,
+		25  POSITION_for_ram_sup / lateral anterolateral,
+		26  Posit_For_Ovale / 'ant to gf, pos wall as' 'med to gf, pos wall as' 'medial to gf, post wall pet' pos_to_gf,
+		27  Alisphenoid_Canal / absent present,
+		28  Ant_Open_Alar_Canal / within_sphenoorbital_fissure posterior_to_sphenoorbital_fiss,
+		29  Post_Open_Alar_Canal / well_sep_from_fo within_deep_groove,
+		30  Foramen_Rotundum / absent present,
+		31  Mastoid_Foramen / present absent,
+		32  Posttemporal_canal / present absent,
+		33  Preglenoid_process / absent present,
+		34  Supraorbital_process / absent present,
+		35  posorbital_bar / absent 'present, almost complete' 'present, complete',
+		36  'Contact Front/Max' / absent present,
+		37  Lacrimal_Tubercle / absent present,
+		38  palatine_fissure / small large,
+		39  Post_margin_nares / anterior_over_canines between_P1_and_P2 posterior_to_P2,
+		40  Mandibular_Foramen / small large,
+		41  condyle / below_level_of_dentition even_with_superior_aspect_of_de substantially_higher_than_denti,
+		42  Dentary_angle / level_with_ventral_edge below_ventral_edge,
+		43  'Upp Inc 1-2' / present I1_and_I2_absent,
+		44  Incisor_Alignment / transverse_arc 'longitudinal, long prema',
+		45  Embrasure_pits / absent present,
+		46  P1_presence / absent 'present one-rooted' 'present two-rooted',
+		47  P3_roots / three two,
+		48  P4_protocone / present absent,
+		49  P4_paracone_height / equal_to_paracone_M1 greater_than_twice_M1_paracone,
+		50  P4_metacone / absent present,
+		51  stylar_shelf / present absent,
+		52  M2_metacone / subequal_to_paracone half_paracone highly_reduced,
+		53  M1_parastyle / absent weak strong,
+		54  ling_cing_M2 / present absent,
+		55  Ectocingula / present absent,
+		56  Hypocone_M1M2 / absent present,
+		57  Trigon_basin / broad somewhat_narrow very_narrow,
+		58  'Paraconule M2/' / absent present,
+		59  'Metaconule M2/' / absent present,
+		60  M3 / 'present, larger than M2' 'present, approx. equal M2' reduced absent,
+		61  lower_canines / absent present,
+		62  lower_incisors / small_and_vertical tusklike,
+		63  lower_Canine_shape / oval triangular,
+		64  p1 / present absent,
+		65  p3_metaconid / absent present,
+		66  p4_metaconid / absent present,
+		67  lin_cing_molars / absent 'continuous, mesial-distal',
+		68  m1_parac / present absent,
+		69  'm1 parac/crist posit' / cusp_or_crest_lingual 'cusp or crest ant.betw pr-pa',
+		70  m2_parac / present absent,
+		71  'm2 parac/crist pos' / cusp_or_crest_lingual 'cusp or crest ant.betw pr-pa',
+		72  m3_parac / present absent,
+		73  'm3 parac/cris posit' / cusp_or_crest_lingual 'cusp or crest ant.betw pr-pa',
+		74  m1_metaconid / present absent,
+		75  m2_metaconid / present absent,
+		76  m3_metaconid / present absent,
+		77  m1_m2_hypoconulid / absent present,
+		78  molar_protoconid / subequal_to_talonid twice_height_of_talonid,
+		79  protoloph / absent present,
+		80  metaloph / absent present,
+		81  ant_low_lophs / absent present,
+		82  post_low_lophs / absent present,
+		83  Reen_groove / proximal absent distal,
+		84  Talonid_basin_molar / 'basin, hy and ent present' reduced,
+		85  M3_Hypoconulid / long reduced absent,
+		86  dp4 / resembles_m1 6_cusped,
+		87  Elongate_shear_facets_on_molars / absent present,
+		88  Cerv_vert_length / long short very_long,
+		89  'Art Sacral/Illium' / broad narrow absent,
+		90  Number_Sacrals / one 'two-three' four 'five-six',
+		91  Scapular_Spine / 'large acromion, overhangs gleno' small_acromion 'large acromion, does not overha',
+		92  Entepicondyle / wide narrow,
+		93  Entepi_foramen / present absent,
+		94  Olecranon_process / short long,
+		95  Olec._fossa / shallow deep,
+		96  Proximal_radius / single_fossa two_fossae three_fossae,
+		97  Distal_radius / single_fossa split_into_scaphoid_and_lunate convex_to_flat_distinct_facets,
+		98  Centrale / present absent,
+		99  Manus / mesaxonic paraxonic,
+		100  Greater_troch / inferior_to_head_of_femur equal_to_head_of_femur above_head_of_femur,
+		101  3rd_troch / present highly_reduced absent,
+		102  Distal_Femur / wide narrow,
+		103  Astragalar_Canal / present absent,
+		104  Navicular_Facet / convex 'saddle-shaped' trochleated,
+		105  Sus_barbatustentacular_facet / narrow wide,
+		106  Cuboid_facet / absent 'present-small' 'present-large',
+		107  Lateral_process / present absent,
+		108  Pes / 'mesaxonic-3' paraxonic 'mesaxonic-4',
+		109  Proxi_astrag / flat grooved deeply_grooved,
+		110  'Nav/Cub fusion' / unfused fused,
+		111  'm3/m4 fusion' / absent present,
+		112  Metatarsal_1 / unreduced reduced highly_reduced,
+		113  Metatarsal_2 / unreduced reduced highly_reduced,
+		114  Metatarsal_5 / unreduced reduced highly_reduced,
+		115  Unguventral / curved_inferiorly straight,
+		116  Ungdorsal / transversely_compressed 'broad, symmetrical' 'broad, asymmetrical',
+		117  Stomach_epithelium / nonglandular composite discoglandular glandular,
+		118  Lumen / unilocular plurilocular,
+		119  Lumen_diverticulation / absent present,
+		120  Penile_Cavernous_Tissue / abundant sparse,
+		121  Hair / abundant absent_or_sparse,
+		122  sebac_glands / present absent,
+		123  Primary_Bronchi / two three,
+		;
+
+MATRIX
+[                                        10        20        30        40        50        60        70        80        90        100       110       120       130        ]
+[                                         .         .         .         .         .         .         .         .         .         .         .         .         .        ]
+Agriochoerus                     000?0000111001011021000??10??001000?100010000{02}00011020{01}10000??01010000000000000000100100??1010121??02112111120020010???????
+Ambulocetus                      ?11???????111{01}1?1?0?0?{12}???0??0???0?????1?0?11??1101?01102001?????01??1111?11010000012?1?02???1?010?1010????11?0?0011???????
+Andrewsarchus                    ???????????????????10?{12}???1?0???10????0???000100?01{01}00001000???0????????????????00?00??????????????????????????????????????
+Ankalagon                        ????????????????????????????????????????0?????000111210020020000000010101100?10000212?0????10?11?????0?1?10?00????11???????
+Archaeotherium                   100101103?1000011?210?21?00??01100200000010001101010{01}01101110000000000000000100000100100011111121?100112121120022210???????
+Arctocyon                        00000000?0?????????00?00010??1001000100?1000010000100001000200?00000000000000000001000000?00000000?00000010?00000?01???????
+Balaenoptera_edeni               121311112111103011011121?00??01101?00?20?0??????????????????00????????????????0000?????1?02110?01??????????????222???1?1111
+Basilosaurus                     121311112111122011001?11?00???110110?011100112111012??10200300000001?1?1?111010000012?11202111001012???????2?{01}0220?????????
+Camelus_dromedarius              000111002110010111100001?00??00101110000201?0000011001110001000001000000000000000000010203111012211021121211201222112111001
+Diacodexis                       0??1000?3010?0??10{01}00000010??00100?10?0??0000100001000000111000000000000000000000010010001?1101211?{12}1112121120020010???????
+Dissacus                         0101000????????????1??20101?1??01???????00??010001112{01}0020{01}20000000010101000010000212?0????00?111????101?10?00????11???????
+Dorudon                          12131111211112{23}011001?11?00??01001100011100111111012?110200300000001?1?1?111010000012?1120211100111????????????????????????
+Elomeryx                         110111103010000110210011?00??001011010002100021000101011011000001100000000001000001001000?111112111??1?2?11120010012???????
+Eoconodon                        ???1110?{03}1?????????1000??0101??0000?1?00000?01000010000111120000000000000000010000100?0????00?01??????1?010?1??????????????
+Equus_caballus                   010011000110?20010200011?3100????02?1?00200001?00110?1110??1100011010101000010111110000003111112210201110000200222111000000
+Hapalodectes                     ??00000?{03}0?????????0010??110011010?1000??0001100?11?2111200{01}??00?00010101000010000012?0?????0?0????????????????????????????
+Harpagolestes                    ??????001?1000011?210?2??11?1??010??100????0{01}11001122110200300?1??0010101?1??10000212?0????10111????0?0101??1??????????????
+Hexaprotodon_liberiensis         11????1031100031??210{01}11?2???0??0001000011000100001000010001011011000000000010000020010003111112111121121211100?0012111?1??
+Hippopotamus_amphibius           110?111031100031102100{01}1?30??0??01110000110001100010100100010111000000000000100000{02}001000311111111121112121120020012111?11?
+Hyopsodus                        0101000?{03}0?????????00?00?110?000000?1000?00001000010000101110000110000000000100000100000020000111?000?00100000?0?010???????
+Hyracotherium                    ?10111??{03}1??????0??10?01?1110110010010002000020001101001011110001101010100001011111000000311101111020111000020020211???????
+Meniscotherium                   0100000?{03}??????????00?0??1110110010?100?200001000?10{01}11101110000010101010000000111100000020001111?020100000000010111???????
+Mesonyx                          1101000?1110000?1?210020101011?010????0??0?001{01}0001121102003??0000001010111?0100002120000111011110110101010110020011???????
+Ovis_aries                       1001010?2110013010200001?10??00101101100201?000000102111000110011100000000000000001001000211101211?121121211211222121111001
+Pachyaena                        ??????0?????????1?210?????????101???1?00000001{01}0011{01}21002012000000001010111101000021200001010111101{12}0{01}010101100{12}0011???????
+Pakicetus                        01?2{01}1102011011110110?11?00??1??00?????010???2?1101200002001???{01}0011010??11?01000001201????????????????????????????????????
+Phenacodus                       ??00110?{03}01?????0?000?01?11100100000100020000100011000{01}101110000110101010000100000101000?2?0001111020100{01}00010010111???????
+Poebrotherium                    00011100?01002011?100?0??00??001011100002000021000102111000100000100000000000000000001020111101211112112111120022210???????
+Protocetidae_sp._Cross_Whale     1112111?21111211???11111?0???0???1???00110011{12}??????????????????001?????????0?????012??1???????????????????????????????????
+Protocetus                       ??1211102111121110011?11?00?????01????1?????110110111?102001?????????1?1?????10000?1??1110?????????????????????????????????
+Remingtonocetus                  ?112111?1111111111011?{12}1?00??0??00???00????11??1??1????????0????????????????0?0000?1??1002?????????2?0?????????????????????
+Sinonyx                          ???10?00101000001?210?2???1?11?010?01000?00001000011210020020000000010101101010000212?0????????????????????????????????????
+Sus_barbatus                     000111100110020010210021?20??0110000100020000210011010110111001101000000000010000010010002111112111121121211200200120001001
+Synoplotherium                   ??????0???1?00??1?210?{12}??0101100100?100??0000??0??11211020020000?000101011??010000212?00?1010111101101010101?0020011???????
+Tapirus_terrestris               ??0111?1300?????0??00?01?1110??0010?1?00200001000110200101100001110101010000101111100000???1101111020111010020020211???????
+Tragulus_javanicus               0?01000031100{12}011?100001?00??00000100100201?00100{01}1001110001100100000000000000000010010002111012111{12}211211112112121{02}111?00?
+Tursiops_truncatus               121311110111123011001121??0??01101?00?21????0???????????????00????????????????0000?????1?02110?01??????????????222??1111111
+;
+END;
+
+BEGIN SETS;
+	CHARSET softtissue (CHARACTERS = Morphology) =  117-123;
+	CHARSET osteology (CHARACTERS = Morphology) =  1-116;
+END;
+BEGIN ASSUMPTIONS;
+	WTSET  NONSEQUENCE = 2: 1-123 ;
+	WTSET * NONSEQUENCE = 2: 1-123 ;
+END;

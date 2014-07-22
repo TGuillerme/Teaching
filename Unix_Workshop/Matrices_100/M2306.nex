@@ -1,0 +1,228 @@
+#NEXUS
+[!This data set was downloaded from TreeBASE, a relational database of phylogenetic knowledge. TreeBASE has been supported by the NSF, Harvard University, Yale University, SDSC and UC Davis. Please do not remove this acknowledgment from the Nexus file.
+
+
+Generated on September 16, 2013; 15:17 GMT
+
+TreeBASE (cc) 1994-2008
+
+Study reference:
+Thayer M.K. 2000. Glypholoma larvae at last: phylogenetic implications for basal
+Staphylinidae? (Coleoptera: Staphylinidae: Glypholomatinae). Invertebrate Taxonomy,
+14(6): 741-754.
+
+TreeBASE Study URI:  http://purl.org/phylo/treebase/phylows/study/TB2:S733]
+
+BEGIN TAXA;
+        TITLE  only;
+        DIMENSIONS NTAX=29;
+        TAXLABELS
+            Acidota
+            Acrolocha
+            Anepius
+            Atheta
+            Austrolophrum
+            Brathinus
+            Coryphium
+            Eudectus
+            Eusphalerum
+            Faronitae_K9
+            Genus_nr_Type_W
+            Glypholoma
+            Holoboreaphilus
+            Ischnoderus
+            Megarthrus
+            Metacorneolabium
+            Microedus
+            Microsilpha
+            'Neophonus -?'
+            Nitidotachinus
+            Omaliopsis
+            Phlaeopterus
+            Phloeonomus
+            Phyllodrepa
+            Proteinus
+            Siagonium
+            Silphotelus
+            Stenomalium
+            Subhaida
+            ;
+END;
+
+BEGIN CHARACTERS;
+[! TreeBASE Matrix URI: http://purl.org/phylo/treebase/phylows/matrix/TB2:M2306]
+
+	TITLE Table_2;
+	LINK TAXA = only;
+	DIMENSIONS NCHAR=132;
+	FORMAT DATATYPE=Standard SYMBOLS= "0 1 2 3 4 5 6 7 8 9" MISSING=? GAP= -;
+	CHARSTATELABELS
+		1  HFd1 / present absent,
+		2  HFd2 / present absent,
+		3  HFl1 / present absent,
+		4  HFm1 / present absent,
+		5  HFc1 / present absent,
+		6  HFc1pos_cf_Fl1 / Lateral PosteroLateral PosteroMedial AnteroLateral Medial Posterior AnteroMedial,
+		7  HFc2 / present absent,
+		8  HFc3 / present absent,
+		9  HEl2 / present absent,
+		10  HEl3 / present absent,
+		11  HEm1 / present absent,
+		12  HEm2 / present absent,
+		13  HEm3 / present absent,
+		14  HEg / present absent,
+		15  HEc3 / present absent,
+		16  HT1 / present absent,
+		17  HT2 / present absent,
+		18  HL2 / present absent,
+		19  HL3 / present absent,
+		20  HLc3 / present absent,
+		21  HLc1to2extra / present absent,
+		22  HVl1 / present absent,
+		23  HVl2 / present absent,
+		24  HVl3 / present absent,
+		25  HV1 / present absent,
+		26  HV2 / present absent,
+		27  HVc1 / present absent,
+		28  HVc2 / present absent,
+		29  HLd2 / present absent,
+		30  HLl0 / present absent,
+		31  HLm1 / present absent,
+		32  HLm2_loc / labrum boundary frontoclypeus 3 4 5 6 7 8 not_applicable,
+		33  HLl1_loc / labrum boundary frontoclypeus 3 4 5 6 7 8 not_applicab,
+		34  Stemmata# / 0. 1. 2. 3. 4. 5. 6.,
+		35  SA_pos / anterior ventral,
+		36  SA_form / 'elong + slender' 'short + fat',
+		37  IIS2 / present absent,
+		38  IIS3 / present absent,
+		39  IIIS1 / articulated unarticulated,
+		40  IIIS2pos / Dorsal Medial VentroMedial Ventral VentroLateral Apical,
+		41  IIIS2 / articulated unarticulated,
+		42  IIIS3pos / Apical Lateral DorsoMedial Ventral,
+		43  IIIS4pos / Lateral DorsoLateral Dorsal DorsoMedial Medial Ventromedial absent,
+		44  DTArms / short_or_absent half long,
+		45  TentBridge / above_head_capsule at_head_capsule absent,
+		46  Cardo_s / present absent,
+		47  Stip_Ms / present absent,
+		48  Mala_Ls#,
+		49  Mxp_s / Medial Ventral MedioVentral,
+		50  Lig_s / 0. 2.,
+		51  Mdb_symm / symmetrical_or_v_nr asymmetrical,
+		52  Mdb_SAT_LR / 00. 11. 22. 33. 10.,
+		53  Mdb_serr / present absent,
+		54  Mdb_pros / Absent Broad Narrow,
+		55  Lig_segm / Absent 1. 2.,
+		56  Labr_tri / present absent,
+		57  Labr_emr / present absent,
+		58  PPreT_Ls / present absent,
+		59  PpreT_Ms / present absent,
+		60  PPreT_Mc / present absent,
+		61  Pc2_5 / present absent,
+		62  Pc4 / present absent,
+		63  Pc5 / present absent,
+		64  PA1 / present absent,
+		65  PA3 / present absent,
+		66  PL2 / present absent,
+		67  PL3 / present absent,
+		68  PL5 / present absent,
+		69  PDa1 / present absent,
+		70  PDa2 / present absent,
+		71  PDa3 / present absent,
+		72  PDb1 / present absent,
+		73  PDb2 / present absent,
+		74  PDb3 / present absent,
+		75  PDc1 / present absent,
+		76  PDc3 / present absent,
+		77  PsPr1 / present absent,
+		78  PsPr3 / present absent,
+		79  PsEu2 / present absent,
+		80  PsSt2 / present absent,
+		81  PsLs3 / present absent,
+		82  Msc1 / present absent,
+		83  Msc3 / present absent,
+		84  Msc4 / present absent,
+		85  Msc5 / present absent,
+		86  MsPg / present absent,
+		87  MsL5 / present absent,
+		88  MsDb1 / present absent,
+		89  MsDb2 / present absent,
+		90  MsDb3 / present absent,
+		91  MsP3 / present absent,
+		92  MsP5 / present absent,
+		93  Meta / 'Meso-A3or4' Meso,
+		94  T1c1 / present absent,
+		95  T1Pg / present absent,
+		96  T1L14pos / tergite paratergite,
+		97  T1Da2 / present absent,
+		98  T1Db2 / present absent,
+		99  T1Db3 / present absent,
+		100  T1Dc2 / present absent,
+		101  T1Dd2 / present absent,
+		102  T1P3 / present absent,
+		103  S1D1 / present absent,
+		104  S1D2 / present absent,
+		105  S1D3 / present absent,
+		106  S1P3 / present absent,
+		107  S1P4 / present absent,
+		108  S1P6pos / sternite parasternite,
+		109  T2to8c1 / present absent,
+		110  T2L14pos / tergite paratergite,
+		111  T3L14pos / tergite paratergite,
+		112  T4L14pos / tergite paratergite,
+		113  T5L14pos / tergite paratergite,
+		114  T6L14pos / tergite paratergite,
+		115  T7L14pos / tergite paratergite 2 3 4 5 6 7 8 not_applicable,
+		116  T8L14pos / tergite paratergite,
+		117  T9c1 / present absent,
+		118  UrogSegm / 0 1. 2.,
+		119  UrogNarr / present absent,
+		120  UD1 / present absent,
+		121  S2P5pos / sternite parasternite,
+		122  S2P6pos / sternite parasternite,
+		123  S3P5pos / sternite parasternite,
+		124  S3P6pos / sternite parasternite,
+		125  S4P5pos / sternite parasternite,
+		126  S4P6pos / sternite parasternite,
+		127  S5P5pos / sternite parasternite,
+		128  S5P6pos / sternite parasternite,
+		129  S6P5pos / sternite parasternite,
+		130  S6P6pos / sternite parasternite,
+		131  S7P5pos / sternite parasternite,
+		132  S7P6pos / sternite parasternite,
+		;
+
+MATRIX
+[                            10        20        30        40        50        60        70        80        90        100       110       120       130       140       150]
+[                             .         .         .         .         .         .         .         .         .         .         .         .         .         .         .]
+Acidota              000000010011100100101000010010100501101200201010010202111001000010011011011100110000001001100001011001011011011111100111111111111111
+Acrolocha            000005011001000110000100000010022500001200321001010100111110000100100011010100010000101001100001000101011011011110000110111111111111
+Anepius              101011010001101000111000001000000601??1100221110100310111111010110000001001011111101000100011101001010101010000000000110000000000000
+Atheta               0000000100000000000010000100010001010015103?0001010100111??110000000000000000000100010100000000000000000010000000000021?000000000000
+Austrolophrum        000000011011010001001100010010022500000202011003010110111000000000101011011100000000101001100001000001011011011111000110111111111111
+Brathinus            000104011001100100001000010010000500001100201011010100211001010010111011011000010001001001101001011001011011011111100110110000000000
+Coryphium            000100011001000101010001000011000501001300221002010000110001110010101011011100000100001001100101000000011011111111111100111111111111
+Eudectus             01110?011001000111011000010010000501001200321002010000110011110010101011011100000100101001100101000000011011111111111110111111111111
+Eusphalerum          000001011011000110001000010010022500001200221001010100111111100000101011011100000000101001100001000001011011011110000110111111111100
+Faronitae_K9         000005011001101110011000110011199210100401212001210110011?0?0100000000010011??00101000000000100000101001110100000000011?111111111111
+Genus_nr_Type_W      000004010001100110000110010000022500001400221011000110111111011010111010001101110001101000000001000000011011011110000111111111111100
+Glypholoma           000002011001000110001000010011011600001511511001011112111010000010101001001100010000001000101001110100011111011100000110010101000000
+Holoboreaphilus      000101011001000111011010000010000501001300221002010000110011110010101011011100000100001001100001000000011011011111110100111111111111
+Ischnoderus          000005010000100110000000010010022500001510521001011402101110000000100011000100001000101000100001000001011011011111000110111111111100
+Megarthrus           000011110011101100011001110001000600001100211011110112111001010000101001011010111101000000011101000110100111111111900210000000000000
+Metacorneolabium     000006001011110011001111010010111011111510421000000210111101011110111111111111101101101111101101110100111011111111110110111111111111
+Microedus            000002011101000100001000010010022501001510221002010100211001100011101011011100000100001001100001000001011011011110000110111100000000
+Microsilpha          000002010{01}11110110{01}0{01}{01}{01}{01}010001001211101010221011010010111111101110110101101101001000111100100011001101011011011111110110111111111111
+'Neophonus -?'       000001010111000110101000010101000600101202311000011100110011000110100011011101010010001001100000110100011101000000000100111111111100
+Nitidotachinus       000005010011100101001001111011000600111103210012010100211011000110000010001101011001101010000000101110111101000000000211000000000000
+Omaliopsis           000005011100000100001000010010022500001510421012011402101111000000100011000100000000101000100001000001011011011110000110111111110000
+Phlaeopterus         010003010011100100000000010110000500001111221001010210211001100010101011011100000001001001100001000000011011011110000110111111110000
+Phloeonomus          000005000011100101001000010010022500001510321001011011111110100000100011010101000000101001100001000001011011011111000110111111111100
+Phyllodrepa          000005010001100110000111010010022000001300411001011412201001000000100011001100000000001000100001000000010011011111000110111111111111
+Proteinus            100011110011001100111100111101001300001110211111110112111011110110100011010010111101000001011101000111100110100000001210000000000000
+Siagonium            000001010101100000010011000001011400101312211002{12}11410111111000010011011010000001000001001101000000010000010000000000210000000000000
+Silphotelus          0000111101110011000110?1110101000600001510221011110012111001110001101011011110111101000101011101000011101011100000001210000000000000
+Stenomalium          000005010010100110000000010010022500001300311001011402101110000011000011000100000000111000100011000001011011011111000110111111111100
+Subhaida             0001000110010001010010000100100005010013002{12}1002010000110001110010101011011100000100001001100101000000011011111111110100111111111111
+;
+END;
+

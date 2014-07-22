@@ -1,0 +1,229 @@
+#NEXUS
+[!This data set was downloaded from TreeBASE, a relational database of phylogenetic knowledge. TreeBASE has been supported by the NSF, Harvard University, Yale University, SDSC and UC Davis. Please do not remove this acknowledgment from the Nexus file.
+
+
+Generated on September 16, 2013; 15:24 GMT
+
+TreeBASE (cc) 1994-2008
+
+Study reference:
+Quicke D., & Belshaw R. 1999. Incongruence between morphological data sets: an example
+from the evolution of endoparasitism among parasitic wasps (Hymenoptera: Braconidae).
+Systematic Biology, 48(3): 436-454.
+
+TreeBASE Study URI:  http://purl.org/phylo/treebase/phylows/study/TB2:S608]
+
+BEGIN TAXA;
+        TITLE  morphology;
+        DIMENSIONS NTAX=33;
+        TAXLABELS
+            Acampsis_alternipes
+            Aleiodes_coxalis
+            Alomyia_debellator
+            Alysia_lucicola
+            Aphidius_ervi
+            Aphidius_rhopalosiphi
+            Binodoxys_acalephae
+            Bracon_sp.
+            Cenocoelius_analis
+            Chelonus_sp.
+            Colastes_incertus
+            Diaeretiella_rapae
+            Dyscritulus_planiceps
+            Ephedrus_californicus
+            Ephedrus_persicae
+            Ephedrus_plagiator
+            Ephedrus_validus
+            Eubazus_semirugosus
+            Hecabolus_sp.
+            Heterospilus_prosopidis
+            Histeromerus_mystacinus
+            Lysiplebus_confusus
+            Monoctonus_pseudoplatani
+            Pauesia_juniperorum
+            Pauesia_unilachni
+            Praon_abjectum
+            Praon_dorsale
+            Praon_volucre
+            Pseudopraon_mindariphagum
+            Rhyssalus_sp.
+            Sathon_falcatus
+            Trioxys_pallidus
+            Xorides_praecatorius
+            ;
+END;
+
+BEGIN CHARACTERS;
+[! TreeBASE Matrix URI: http://purl.org/phylo/treebase/phylows/matrix/TB2:M2680]
+
+	TITLE Appendix_1;
+	LINK TAXA = morphology;
+	DIMENSIONS NCHAR=118;
+	FORMAT DATATYPE=Standard SYMBOLS= "0 1 2 3 4 5" MISSING=? GAP= -;
+	CHARSTATELABELS
+		1  antennsensilla / scattered one_rank 2_ranks,
+		2  antBarlin / small_hole medium_hole entire,
+		3  'm/f ant=' / unequal equal,
+		4  Maxillary_palp / six five four three,
+		5  labial_palp / four three two one,
+		6  cyclostome / no yes,
+		7  laciniaround / one three,
+		8  laciniashort / one three,
+		9  hypoclypset / no yes,
+		10  occipital_carina / complete abs_dors completely_abs,
+		11  Prontal_dorsum / simple_or_two_lateral_pits dorsope_and_2_lt_pits,
+		12  prepectal_carina / present absent,
+		13  Notauli / present absent,
+		14  scut_sulc / crenulate_or_with_1_carina smooth,
+		15  scutellum / with_posterior_cren_groove without_posterior_crenulated_gr,
+		16  propodeum / areola_complete areola_incomplete,
+		17  Central_areola / large small,
+		18  antenna_cleaner / single_fine_comb_of_setae two_rows_of_setae,
+		19  Fore_tibia / pegs_absent present,
+		20  FWR / contig_with_parastigma lost,
+		21  '2m-cu' / pres absent,
+		22  '1-SR+M' / present_complete present_but_incomplete totally_absent,
+		23  R_to_margin / yes no,
+		24  'FW1-SR' / present lost,
+		25  'r-m' / present absent,
+		26  'FW2-SR' / present absent,
+		27  MCU / fully_sclerotized largely_absent,
+		28  'FW m-cu' / present absent,
+		29  'FW2-M' / part_present absent,
+		30  FWa / present absent,
+		31  3CU1 / present absent,
+		32  'HW2-CU' / present absent,
+		33  'HW cu-a' / present absent,
+		34  HW_submarginal / present absent,
+		35  'HWm-cu' / present absent,
+		36  Hindwing_secondary_hamuli / 'on spur beyond 1-SC+R' 'overlapping origin of 1-SC+R' 'on C + SC + R',
+		37  petiole / unfused fused,
+		38  numspir / seven six five,
+		39  T2_spir / in_notum in_laterotergite,
+		40  'T2-T3articulation' / fixed flexible,
+		41  'MT4-7 apodemes' / short 'long, thin, spine-like',
+		42  MT8sculpt / smooth microsculpture,
+		43  MS8 / pointed_anteriorly square_anteriorly,
+		44  rectal_pads / six four two,
+		45  chromosomes / four five six seven eight more_than_8,
+		46  prongs / absent present,
+		47  ovip_sheath / pointed truncate,
+		48  GAoverlap / not trans,
+		49  ovip_dor_valve / lumen_divided lumen_entire,
+		50  ovip_shape / straightish strongly_curved,
+		51  ovip_ridge / dorsal_ridge_absent present,
+		52  Ovip / simple nodus notch double_nodus,
+		53  sperone / absent present,
+		54  DVsculp / present_ctenid pres_setae abs,
+		55  rachies / not to_end,
+		56  egg_canal / closed_by_LVs closed_by_DV,
+		57  ctenidia / otherwise 'with scale-like combsctenidiact',
+		58  ctenidia / without_sock_seta with_sock_seta,
+		59  valvillus / many two one none,
+		60  valvillus / no_fringe fringe,
+		61  valpos / apical medial basal,
+		62  lower_valve / flaps_absent flaps_normal flaps_large,
+		63  lv_seal / fades_out scaly_and_detached,
+		64  no_serrations / '< 3' three '> 3',
+		65  spermatheca / white black,
+		66  venom_app / muscular not_so,
+		67  res_sculp / spiral not_spiral,
+		68  VGA / otherwise with_long_prim_duct_and_anterio,
+		69  Res_Div / undivided divided,
+		70  VGins / in_spiral_part not_in_spiral_part,
+		71  ven_gland / anterior medial posterior,
+		72  no_ins / one two many,
+		73  ovarioles / one two 'three-seven' eight_or_more,
+		74  cercifused / cerci_separate cerci_fused_fo_TIX,
+		75  cerci_setae / _many five four three,
+		76  articulated_cusp / present fused,
+		77  basal_ring / wide_laterally unifomly_narrow produced_medially,
+		78  aedeagus / normal reduced,
+		79  vas_def / posterior anterior,
+		80  Testes / fused_above_gut separate_or_fised_below,
+		81  sperm / long medium short,
+		82  sperm_morphol / normal abnormal_morphology,
+		83  egg / ovoid 'lemon-shaped' with_long_process,
+		84  synovigeny / synovigenic proovigenic,
+		85  yolky / anhydropic hydropic,
+		86  teratocytes / absent present,
+		87  teratocyte_origin / from_polar_bodies from_delamination_of_serosa,
+		88  lar_processes / absent pair_below_tail,
+		89  L1_mandib_shape / sickle_and_narrow broad_base_with_hook_blade,
+		90  L1_A_spines / absent single_row multiple_rows,
+		91  L1_T3_spines.2 / present absent,
+		92  l1spinsfused / not_fused fused_and_branching,
+		93  l1spinesgroups / not_grouped grouped,
+		94  L1_sensilla / without_group_of_3 with_group_of_3,
+		95  L1_labral_sensilla / absent present,
+		96  lar_antenna / papilliform disc absent,
+		97  Larval_mandible / toothed smooth,
+		98  larmandib / cross_or_meet separate,
+		99  Larv_spir / prothorax mesothorax,
+		100  'l-spirac' / divided undivided,
+		101  hypostspur / present absent,
+		102  stipital / simple paddle baloon,
+		103  larEpist / present absent_or_v_reduced,
+		104  ringsclerite / absent present,
+		105  anal_vesicle / absent present,
+		106  postvencomm / present absent,
+		107  instars / five four three,
+		108  Ovip_into_gang / not yes,
+		109  idiobiont / idiobiont koinobiont,
+		110  ectopar / ecto endo,
+		111  final_external_feeding / present absent,
+		112  mummif / no_mummy mummy,
+		113  mum / pale always_black,
+		114  pupate / internal external,
+		115  emergence_hole / A B,
+		116  paralysis / permanent temporary none,
+		117  host_feeding / present absent,
+		118  hostaphid / not_aphid aphid,
+		;
+
+MATRIX
+[                                     10        20        30        40        50        60        70        80        90        100       110       120       ]
+[                                      .         .         .         .         .         .         .         .         .         .         .         .       ]
+Acampsis_alternipes           01000011000000001100100000000000001000110011?000100011010021011?111001?030011011??0110?002100001001010101??11100?0?210
+Aleiodes_coxalis              1000010000000011?0011000000001010010000100115000000000?0012101021000002010012000000000?0121????1100000000?00111111?110
+Alomyia_debellator            0101000100001011?000020???000100001010000000?000100100000011010201100000?0000000000??0?0???????111001000????1111?1?2?0
+Alysia_lucicola               100000000200001001001000000001010002001100115000000200?0012001010000102010012001000110?01{12}000??11100001000101110?1?110
+Aphidius_ervi                 12021000001011101001121001100111111210101012101?10121001103??00110000021013110111011110000101012111111100?101111011211
+Aphidius_rhopalosiphi         12021000001011101001121001100111111210101012301?10121001103??0011000002101311011101111000010101211?1111000101111011211
+Binodoxys_acalephae           120220000000111000011210111111?1111210100112410?1100??01?0????0?10000?2?0111?0????11?1?01000000211?102100?1?1111010211
+Bracon_sp.                    1001010012010011?101100000000101001200010011500000010010012001020000012210012000000000?0121????00000000001000000?0?000
+Cenocoelius_analis            01000011000000101000100000000001001100110011?000100212010001?11211100110300110112121???0???????100?01010????1100?0?2?0
+Chelonus_sp.                  0101001100000011?100110100000001001102010001200010021201101111?11110012010011011210111100{01}0000?10010101010101100?0?210
+Colastes_incertus             1000010000010011?001100000000101000200010001?000000100100120010?000010?010012000000000?011000??00000000001000000?0?000
+Diaeretiella_rapae            120{23}2000001011101001121011110111111210101012201?10121?01?03??00?1000002101311011??11?10000101012111111100?1?1111011211
+Dyscritulus_planiceps         1202100000000110000112101100010110120010001200001002???1?0???20?01000?00102001????01???110010102111110110?1?111100?211
+Ephedrus_californicus         12122000001001100001100000000101101200100012301010021001003??20200100020101110111?01111110000102101110100?101111110211
+Ephedrus_persicae             121220000010011000011000000001{01}1101200100012301010021001003??2020010002010111011??01111110000102101110100?101111110211
+Ephedrus_plagiator            12122000001001100001100000000101101200100012301010021001003??2020010002010111011?001111110000102111110100?101111110211
+Ephedrus_validus              12122000001001100001100000000101101200100012301010021001003??2020010002010111011??01111110000102111110100?101111110211
+Eubazus_semirugosus           01000011000000000000100110000001001000110011?000100212010001?1101110012030011011210111?000000??1001010101?101100?0?210
+Hecabolus_sp.                 1000010010000011?011100000000101000200010001?00000030010012001020000112110012000000000?011000??00000001001000000?0?0?0
+Heterospilus_prosopidis       10000100100000100011110000000101000200010001?00000030010012001020000112110012000000000?011000??00000000001000000?0?000
+Histeromerus_mystacinus       1100010011011011?000{01}00000000001000100110002?00000000?1001101100011100201000000???0000?0???????0000000000??00000?0?010
+Lysiplebus_confusus           120{23}300000101111?001121011110111111210101012200?10121001?03??101100000??01311011??11110000101011111111100?1?1111011211
+Monoctonus_pseudoplatani      120210000010111000011210011011?1111210100112300110021?01?020200110100?2?001110????11?1?11000000211?102100?111111010111
+Pauesia_juniperorum           120210000000011000011210011001{01}1111210100012201010??1?01?03???0110000???01311011??11?1?00010100211?111100?1?1111011211
+Pauesia_unilachni             12021000001011100001121001100111111210100012200010?21?01?03???0110000?2?01311011??01?1?00010100211?111100?1?1111011211
+Praon_abjectum                1202100000000111?0011{12}10110{01}01{01}1101200100012000010?21001003??20101100???1020011110011111100101021?1110110?1?111100?211
+Praon_dorsale                 1202100000000111?0011110110{01}0101101200100012000010021001003??20101100???1020011110011111100101021?1110110?1?111100?211
+Praon_volucre                 1202100000000111?0011110110{01}01{01}1101200100012000010021001003??20101100???1020011110011111100101021?1110110?1?111100?211
+Pseudopraon_mindariphagum     12022000000001100001121011001101101200100?1??00010?2?????0????0??1100????02001?????????1?????????1????1?0???11110{01}0211
+Rhyssalus_sp.                 1000010010000010100010000000000100020011000??000000100100110010?01110020100?100?000000?0???????0000000000??00000?0?000
+Sathon_falcatus               2111101102011011?001101010000001001001110001500011001201101121121110012010011011210111?0021????20010001010101100?0?210
+Trioxys_pallidus              120220000000111000011210111111?1111210100112410111001001?03???00100000?101111011??11?10010000002111102100?101111010211
+Xorides_praecatorius          01010001000000000000020???000100001010000000?00000011000001001020000000020000010000000?0???????000?000000??00000?0?0?0
+;
+END;
+
+BEGIN SETS;
+	CHARSET DQbiolneutral (CHARACTERS = Appendix_1) =  1-18 20-39 42-45 49 51 53-72 74-83 87 106 113 115 118;
+	CHARSET DQbioladapt (CHARACTERS = Appendix_1) =  19 40-41 46-48 50 52 73 84 88-104 107;
+	CHARSET RBadultmale (CHARACTERS = Appendix_1) =  1-45 74-82 118;
+	CHARSET RBlarfem (CHARACTERS = Appendix_1) =  46-73 83-84 87-104 106-107 113 115;
+	CHARSET DQbiolabsolute (CHARACTERS = Appendix_1) =  85-86 105 108-112 114 116-117;
+END;
