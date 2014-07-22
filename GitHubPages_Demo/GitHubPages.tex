@@ -9,6 +9,11 @@
 \linespread{1.66} % All text should be double-spaced with occasional exceptions for tables. 
 \raggedright
 
+\usepackage{fancyhdr}
+\usepackage{lastpage} 
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage \hspace{1pt} / \pageref{LastPage}}
 
 \begin{document}
 
@@ -40,7 +45,6 @@ It's dead easy\footnote{Involves just clicking.}, just follow these steps (you m
         \item{Windows: https://windows.github.com/}
         \item{Mac: https://mac.github.com/}
         \item{Linux/Nerd\footnote{If you're a bit more familiar with not only clicking but also copy/pasting stuff in the terminal window.}: You're grant, it's really easy on terminal too.}
-            %I can't see what this footnote refers to?
         \end{itemize}
 
     \item{Generate your page:}\\
@@ -88,8 +92,7 @@ user.github.io/ \\
 \end{spacing}
 
 \subsection{Domain name?}
-If you don't happen to have a domain name (e.g. checkmyawesomecv.com) there's a way to do it by adding a CNAME file to your repository.
-    %I'm not sure if this is what you mean?
+If you happen to have a domain name that you're using for an other website (e.g. checkmyawesomecv.com) there's a way to use it by adding a CNAME file to your repository.
     
 \noindent{https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages}
 
