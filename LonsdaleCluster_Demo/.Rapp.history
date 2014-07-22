@@ -1,0 +1,698 @@
+summary(mod)
+load("/Users/kevinhealy/Desktop/Useful raw mods/Non Volant/Al1.FNon.V.301.320/Model1_tree_16.R")
+mod<- model
+summary(mod)
+load("/Users/kevinhealy/Desktop/Useful raw mods/Non Volant/Al2.FNon.V.321.340/Model1_tree_5.R")
+mod<- model
+summary(mod)
+load("/Users/kevinhealy/Desktop/Useful raw mods/Non Volant/Al3.FNon.V.341.360/Model1_tree_4.R")
+mod<- model
+summary(mod)
+load("/Users/kevinhealy/Desktop/Useful raw mods/Non Volant/Al4.FNon.V.361.380/Model1_tree_11.R")
+mod<- model
+summary(mod)
+load("/Users/kevinhealy/Desktop/Useful raw mods/Non Volant/Dolp.FNon.V.381.400/Model1_tree_14.R")
+mod<- model
+summary(mod)
+load("/Users/kevinhealy/Desktop/Useful raw mods/Non Volant/Dolp.FNon.V.381.400/Model1_tree_6.R")
+mod<- model
+summary(mod)
+load("/Users/kevinhealy/Desktop/Useful raw mods/Non Volant/Dolp.FNon.V.401.420/Model1_tree_3.R")
+mod<- model
+summary(mod)
+load("/Users/kevinhealy/Desktop/Useful raw mods/Non Volant/Mac1.FNon.V.421.440/Model1_tree_11.R")
+mod<- model
+summary(mod)
+load("/Users/kevinhealy/Desktop/Useful raw mods/Non Volant/Mac2.FNon.V.441.460/Model1_tree_10.R")
+mod<- model
+summary(mod)
+load("/Users/kevinhealy/Desktop/Useful raw mods/Non Volant/Mac3.FNon.V.461.480/Model1_tree_5.R")
+mod<- model
+summary(mod)
+load("/Users/kevinhealy/Desktop/Useful raw mods/Non Volant/Mac4.FNon.V.481.500/Model1_tree_8.R")
+mod<- model
+summary(mod)
+En.bal.an_jh
+aver.amount.con
+8/70
+rm(list=ls())#
+graphics.off()
+search.time <- 0.5 #percentage of time searching assumed to be half the day
+s.dens <- 4.38 #the density of caracasses in the Serengeti in kg/km2/day#
+kM.a <- 6000 #adult dinosaurs mass in kg#
+k.En.bone <- 6.7*1000*1000 #j/kg #from 6.7kJ/g based on the average from vultures food#
+k.En.bone.l <- 2*1000*1000 #j/kg #from 6.7kJ/g based on the average from vultures food
+the size bins used  by Carbone et al#
+#dino.data <- read.csv("Carbone.dino.size.csv")#
+siz.gt <- c(20.6,58.3,1123,5347)#
+siz.gh <- c(75,216,700,2500,5000,8500,25000)#
+#
+#the percentage each group gives to this carcas production#
+#percent.carc <- c(0.493,0.368,0.06,0.067,0.006,0.004,0.002) including suropds#
+percent.carc <- c(0.493,0.368,0.06,0.067,0.006,0.004,0.002)#
+#
+#if each herbivour bin sized group attributes an equal amount of "carcass" to the above density#
+mass.car <- s.dens/7
+search.time <- 0.5 #percentage of time searching assumed to be half the day#
+s.dens <- 4.38 #the density of caracasses in the Serengeti in kg/km2/day#
+kM.a <- 6000 #adult dinosaurs mass in kg#
+k.En.bone <- 6.7*1000*1000 #j/kg #from 6.7kJ/g based on the average from vultures food#
+k.En.bone.l <- 2*1000*1000 #j/kg #from 6.7kJ/g based on the average from vultures food#
+#
+#the size bins used  by Carbone et al#
+#dino.data <- read.csv("Carbone.dino.size.csv")#
+siz.gt <- c(20.6,58.3,1123,5347)#
+siz.gh <- c(75,216,700,2500,5000,8500,25000)#
+#
+#the percentage each group gives to this carcas production#
+#percent.carc <- c(0.493,0.368,0.06,0.067,0.006,0.004,0.002) including suropds#
+percent.carc <- c(0.493,0.368,0.06,0.067,0.006,0.004,0.002)#
+#
+#if each herbivour bin sized group attributes an equal amount of "carcass" to the above density#
+mass.car <- s.dens/7
+we can calculate the amount of that production is bone from Prange et al 1979#
+#bon.m.h <-  0.061*(siz.gh^1.09) #scaling for bone allometry for mammals#
+bon.m.h <-  0.065*(siz.gh^1.071) #
+#with flesh making up the differnce#
+flesh.m.h <- siz.gh-bon.m.h
+bon.m.h
+to calculate the energy content of each individual#
+#bone content#
+#Check that the energy conversion is ok#
+indivdual.bone.en <-  bon.m.h*6.7*(10^6) #j #from 6.7(10^6)/kg#
+indivdual.bone.en.l <-  bon.m.h*2*(10^6) #j #from 6.7(10^6)/kg#
+indivdual.flesh.en <-  flesh.m.h*7*(10^6) #j #from 7(10^6)J/kg#
+#then ther enrgy available from bone per km/day is#
+#for body size classes based on scaling#
+e <- 1.97 #constant for theropods#
+c <- 100 #constant for herbivors#
+D <- -0.75#allometric scaling for herbivours#
+f <- -0.88#allometric scaling for theropods#
+#
+#this gives the density no/km for both the theropods and herbivors#
+#Nt <- e*(dino.data[dino.data$guild == "t","mass.categories"]^f)#
+#Nh <- c*(dino.data[dino.data$guild == "h","mass.categories"]^D)#
+Nt <- e*(siz.gt^f)#
+Nh <- c*(siz.gh^D)
+R.r <- 0.11*(kM.a^0.76) #Reptiles form White et al 2006, OLS
+v.max <- 8.5*(kM.a^(-0.08))
+v.s.r <- 0.1*v.max
+Energy cost of searching behaviour in Watts (W) for ectoderms#
+S.r <- 10.3*v.s.r*(kM.a^0.64)#
+#
+#To get a search rate its given by detaction distance d by v.s in meters^2/second searched#
+d <- 200#
+V.r <- 2*d*v.s.r#
+#
+#total energy expended in watts and joules per day for mammalia based met#
+T.en.out.r <- R.r+search.time*S.r #in Watts#
+En.day.r <-  T.en.out.r*60*60*24 #joules per day
+------------------Endoterm model------------------###############
+##############----------------------Mammal----------------------###############
+#Basal metabolic rate based on reptiles scaling from Schmidt-Nielson(1984) in Watts (W)#
+#see White 2011 for all #
+R.m <- 4.12*(kM.a^0.69) #Mammals from White et al 2009 (uses PGLS)#
+#
+#relationship between M and max speed (v.max) meters/second from Alexander (1977)#
+v.max <- 8.5*(kM.a^(-0.08))#
+#v.max <- 20 #this is a crazy assertion from (Bakker 1986, paul 1988,1998)#
+#v.max <- 11 #this is the max speed given in Hutchinson 2002 nature paper.#
+#
+#Assuming a mammal can maintain 50% of this speed from Bennett & Ruben (1979)#
+v.s.m <- 0.5*v.max#
+#
+#Energy cost of searching behaviour in Watts (W) for mammals#
+S.m <- 10.7*v.s.m*(kM.a^0.68)#
+#
+#To get a search rate its given by detaction distance d by v.s in meters^2/second searched#
+d <- 200#
+V <- 2*d*v.s.m#
+#total energy expended in watts and joules per day for mammalia based met#
+T.en.out.m <- R.m+search.time*S.m #in Watts#
+En.day.m <-  T.en.out.m*60*60*24 #joules per day
+Basal metabolic rate based on reptiles scaling from Schmidt-Nielson(1984) in Watts (W)#
+#see White 2011 for all #
+R.m <- 4.12*(kM.a^0.69) #Mammals from White et al 2009 (uses PGLS)
+v.s.p <- 2.5 #meters/second
+Basal metabolic rate based on reptiles scaling from Schmidt-Nielson(1984) in Watts (W)#
+#see White 2011 for all #
+R.m <- 4.12*(kM.a^0.69) #Mammals from White et al 2009 (uses PGLS)#
+#
+#based on the walking speed used by P#
+v.s.p <- 2.5 #meters/second#
+#
+khip <- 264 #hip hight in cm taken from ---#
+#
+#cost of transport in J for a kg of mass over 1 meter.#
+Cot <- 90.284*(khip^(-0.77)) #khip in cm#
+S.p <- (Cot*kM.a)*v.s.p #cost of whole animal to search in Watts
+Basal metabolic rate based on reptiles scaling from Schmidt-Nielson(1984) in Watts (W)#
+#see White 2011 for all #
+R.m <- 4.12*(kM.a^0.69) #Mammals from White et al 2009 (uses PGLS)#
+#
+#based on the walking speed used by P#
+v.s.v <- 2.5 #meters/second#
+#
+khip <- 264 #hip hight in cm taken from Pontzer et al 2009.#
+#
+#cost of transport in J for a kg of mass over 1 meter.#
+V.musc <- 44.1 # V.musc cm3 kg-1m-1#
+Cot.v <- (0.0029*(V.musc) + 0.0598)*20.1 #khip in cm#
+S.v <- (Cot.v*kM.a)*v.s.v #cost of whole animal to search in Watts#
+#
+#To get a search rate its given by detaction distance d by v.s in meters^2/second searched#
+d <- 200#
+V.v <- 2*d*v.s.v #search rate in meters^squared per second#
+area.s.v <- ((V.v*search.time*60*60*24)/(1000^2)) #area (km^2) searched in a day#
+#total energy expended in watts and joules per day for mammalia based met#
+T.en.out.v <- R.m+search.time*S.v #in Watts#
+En.day.v <-  T.en.out.v*60*60*24 #joules per day
+En.day <- c(En.day.r,En.day.m,En.day.a,En.day.p)#
+#
+kfat.e <- 39.3*1000*1000 # this is j/kg#
+#
+Energy.res <- kfat.e*0.075*(kM.a^1.19)#
+#
+days.fasting <- Energy.res/En.day
+no of individual of each size class it would have crossed in that a day#
+d <- seq(50,2000,10)#
+#
+V.p <- 2*d*v.s.p#
+#
+area.s.p <- ((V.p*search.time*60*60*24)/(1000^2)) #area searched in a day#
+ka <- 0.75 #assimilation effeciancy#
+# to get the average no pf days between each carcass
+-----------------Pontzer hip energy-----------------###############
+# the energy balance over time with bones and Carbone in a analytical manner. (This is the average enregy balance over a single day)#
+En.bal.an_ph <- matrix(0,nrow = c(1), ncol = (length(area.s.p)), dimnames = list(c(1),d))#
+for(i in 1:(length(area.s.p[]))){#
+En.bal.an_ph[,i] <- sum((indivdual.bone.en[]*ka)*(area.s.p[i]/(siz.gh[]/s.dens)))- En.day.p#
+}#
+##############-----------------Pontzer muscle energy-----------------###############
+# the energy balance over time with bones and Carbone in a analytical manner. (This is the average enregy balance overa single day)#
+En.bal.an_vh <- matrix(0,nrow = c(1), ncol = (length(area.s.p)), dimnames = list(c(1),d))#
+for(i in 1:(length(area.s.p[]))){#
+En.bal.an_vh[,i] <- sum((indivdual.bone.en[]*ka)*(area.s.p[i]/(siz.gh[]/s.dens)))- En.day.v#
+}#
+##############-----------------low bone energy-----------------###############
+#
+##############-----------------Pontzer hip energy-----------------###############
+# the energy balance over time with bones and Carbone in a analytical manner. (This is the average enregy balance overa single day)#
+En.bal.an_pl <- matrix(0,nrow = c(1), ncol = (length(area.s.p)), dimnames = list(c(1),d))#
+for(i in 1:(length(area.s.p[]))){#
+En.bal.an_pl[,i] <- sum((indivdual.bone.en.l[]*ka)*(area.s.p[i]/(siz.gh[]/s.dens)))- En.day.p#
+}#
+#
+##############-----------------Pontzer muscle energy-----------------###############
+# the energy balance over time with bones and Carbone in a analytical manner. (This is the average enregy balance overa single day)#
+En.bal.an_vl <- matrix(0,nrow = c(1), ncol = (length(area.s.p)), dimnames = list(c(1),d))#
+for(i in 1:(length(area.s.p[]))){#
+En.bal.an_vl[,i] <- sum((indivdual.bone.en.l[]*ka)*(area.s.p[i]/(siz.gh[]/s.dens)))- En.day.v#
+}
+the detection distance nessacary for positive enregy balance#
+#
+##############-----------------high bone energy-----------------###############
+dect_boneh_cot_l <- (En.day.p/(sum(indivdual.bone.en[]*ka*(s.dens/siz.gh[]))))/(2*2.5*0.5*60*60*24/(1000^2)) # the last section devison (i.e. (/(2*2.5*0.5*60*60*24/(1000^2)))) is to convert it into a funcvtion of distance as opposed to area searched.#
+#
+##############-----------------high bone energy-----------------###############
+dect_bonel_cot_l <- (En.day.p/(sum(indivdual.bone.en.l[]*ka*(s.dens/siz.gh[]))))/(2*2.5*0.5*60*60*24/(1000^2))#
+#
+##############-----------------high bone energy-----------------###############
+dect_boneh_cot_h <- (En.day.v/(sum(indivdual.bone.en[]*ka*(s.dens/siz.gh[]))))/(2*2.5*0.5*60*60*24/(1000^2))#
+#
+##############-----------------high bone energy-----------------###############
+dect_bonel_cot_h <- (En.day.v/(sum(indivdual.bone.en.l[]*ka*(s.dens/siz.gh[]))))/(2*2.5*0.5*60*60*24/(1000^2))
+dect_bonel_cot_h
+dect_boneh_cot_h
+for body size classes based on scaling#
+e <- 1.97 #constant for theropods#
+c <- 100 #constant for herbivors#
+D <- -0.75#allometric scaling for herbivours#
+f <- -0.88#allometric scaling for theropods#
+#
+#this gives the density no/km for both the theropods and herbivors#
+#Nt <- e*(dino.data[dino.data$guild == "t","mass.categories"]^f)#
+#Nh <- c*(dino.data[dino.data$guild == "h","mass.categories"]^D)#
+mass.range <- seq(10,6000,10)#
+Nt <- e*(siz.gt^f)#
+Nh <- c*(siz.gh^D)#
+#
+#to get the number of predators in a area we get the integral of equation above#
+#Nt(x) = 1.97size.gt^-0.88#
+#Nt(d)dx = 16.41666666666667x^0.12 #
+#using the bounds of 20.1 and 6000 for x on the above Nt(d)dx = 16.41666666666667x^0.12  = 23.02774155784116#
+No.ther <- 23 #number of theropds of the size range above per km^2#
+#####calculating the scaling search rate. (how does carbone change the detection rate)#
+#### to calulate the search speed#
+#
+#figure out how to calulate these properly#
+search.speed.Fr <- c(1,1.6,1.7,1.9,2.5)#
+body.sizes <- c(20,210,430,1400,6000) #these are form Pontzer paper#
+speed.scal <- glm(log(search.speed.Fr)~log(body.sizes))#
+s.slop <- speed.scal$coefficients["log(body.sizes)"]#
+s.int <-  exp(speed.scal$coefficients["(Intercept)"]) #the exponential is as its from the log-log plot#
+#
+#so scaling of speed is s.int*Mass^s.slope#
+speed.th <- s.int*(siz.gt^s.slop) #meters per second#
+#assuming that the scaling of bulb size and actual acuity scale near isometry (1 to 1 in relative terms)#
+#we put the t.rex detection distance and scale down.#
+d.a <- 200 #detection distance of adult t.rex#
+#
+dect.slop <- 0.1237 #from Zelenitsky et al 2009 paper#
+dect.int <- d.a/(kM.a^dect.slop) #from dect.int*(kM.a^dect.slop) = adult detection distance#
+dect.dist <- dect.int*(siz.gt^dect.slop) #in meters#
+#
+#putting these together then gives the search rate for each group.#
+search.area <- ((dect.dist)*(speed.th*((search.time*2)*60*60*24)))/(1000^2)
+how long it takes each group takes to get to each carcass.#
+days.to.car <- matrix(0, ncol = length(siz.gh), nrow = length(search.area), dimnames = list(search.area,siz.gh))#
+for (i in 1:(length(search.area))){#
+days.to.car[i, ] <- ((siz.gh[]/(s.dens))/search.area[i])#
+}#
+#
+#average time it takes for an adult t.rex to find each size of carcass.#
+average.time.t.rex <- days.to.car[4,]#
+#
+no.days <- seq(0.1,7,0.1)#
+#the average amount of consumers at a carcass after 3.5 days (the avrage time the carcass would be there before being found)#
+   aver.amount.con <- matrix(0,ncol= (length(Nt)), nrow =length(no.days))#
+ for(i in 1:(length(Nt))){#
+ 	for(j in 1:(length(no.days))){#
+ aver.amount.con[j,i] <- ((Nt[i])*search.area[i])*no.days[j]#
+}#
+}#
+#
+#need to calulate the percentage of time a bigger individual turns up beforehand for a given mass.#
+#for smallest it the percentage of time something else turns up first.#
+######juvinil t rex of say half a tonn#####3#
+#
+Mj <- seq(20,6000,1)#
+#
+##############------------------Endoterm model------------------###############
+##############----------------P/mammal----------------###############
+#
+#Basal metabolic rate based on reptiles scaling from Schmidt-Nielson(1984) in Watts (W)#
+#see White 2011 for all #
+R.mj <- 4.12*(Mj^0.69) #Mammals from White et al 2009 (uses PGLS)#
+#
+#based on the walking speed used by P#
+speed.j <- s.int*(Mj^s.slop) #meters per second#
+#
+#for now I am assuming that the hip hight of all theropods scales the same ie a velocirator can be used for juvinle t.rex#
+khip <- c(42,100,116,149,264) #hip hight in cm taken from ---#
+khip.mass <-c(20,210,430,1400,6000)#
+#
+hip.scal <- glm(log(khip)~log(khip.mass))#
+hip.slop <- hip.scal$coefficients["log(khip.mass)"]#
+hip.int <-  exp(hip.scal$coefficients["(Intercept)"]) #the exponential is as its from the log-log plot#
+#
+#so scaling of hip is hip.int*Mass^hip.slope#
+hip.th <- hip.int*(Mj^hip.slop)#
+#cost of transport in J for a kg of mass over 1 meter.#
+Cot.j <- 90.284*(hip.th^(-0.77)) #khip in cm#
+S.pj <- matrix(0,nrow = length(Mj),ncol = 1)#
+for(i in 1:(length(Mj))){#
+S.pj[i] <- (Cot.j[i]*Mj[i])*speed.j[i] #cost of whole animal to search in Watts#
+}#
+#To get a search rate its given by detaction distance d by v.s in meters^2/second searched#
+dj <- 200#
+V.j <- 2*dj*speed.j #search rate in meters^squared per second#
+area.s.j <- ((V.j*search.time*60*60*24)/(1000^2)) #area (km^2) searched in a day#
+#total energy expended in watts and joules per day for mammalia based met#
+T.en.out.j <- R.mj+search.time*S.pj #in Watts#
+En.day.j <-  T.en.out.j*60*60*24 #joules per day#
+##############----------------------end--------------------------###############
+#
+area.s.p <- ((V.p*search.time*60*60*24)/(1000^2)) #area searched in a day#
+ka <- 0.75 #assimilation effeciancy#
+# to get the average no pf days between each carcass#
+##############-----------------high bone energy-----------------###############
+#
+##############-----------------Pontzer hip energy-----------------###############
+# the energy balance over time with bones and Carbone in a analytical manner. (This is the average enregy balance over a single day)#
+En.bal.an_jh <- matrix(0,ncol = c(1), nrow = (length(En.day.j)))#
+for(i in 1:(length(En.day.j[]))){#
+En.bal.an_jh[,i] <- sum((indivdual.bone.en[]*ka)*(area.s.j[i]/(siz.gh[]/s.dens)))- En.day.j[i]#
+}#
+#
+#need to calulate the percentage of time a bigger individual turns up beforehand for a given mass.#
+#for smallest it the percentage of time something else turns up first.
+En.bal.an_jh
+load("/Users/kevinhealy/Desktop/Useful raw mods/Volant/Fvolant.82.100/Model1_tree_1.R")
+load("/Users/kevinhealy/Desktop/Useful raw mods/Volant/Mac4 Fvolant.150.185 copy/Model1_tree_35.R")
+load("/Users/kevinhealy/Desktop/Useful raw mods/Volant/Dolphin Fvolant.200.250 copy/Model1_tree_34.R")
+load("/Users/kevinhealy/Desktop/Useful raw mods/Volant/Dolphin Fvolant.200.250 copy/Model1_tree_225.R")
+load("/Users/kevinhealy/Desktop/Useful raw mods/Volant/Dolphin Fvolant.200.250 copy/Model1_tree_32.R")
+rnorm()
+rexp()
+rexp(1,1)
+rexp(100,1)
+plot(rexp(100,1))
+hist(rexp(100,1))
+hist(rexp(1000,1))
+hist(rexp(1000,2))
+hist(rexp(1000,3))
+0.0032*4000
+4000^0.78
+4^0.78
+4000^0.78
+4^1.17
+250/60
+120/60
+100/60
+95/60
+80/60
+55/60
+60/55
+60/30
+60/40
+60/39
+60/18
+60/14
+60/55
+55/60
+40/60
+18/60
+14/60
+load("/Volumes/USB DISK/Class v volant/Model1_tree_1.R")
+mod.c1 <- model
+load("/Volumes/USB DISK/Class v volant/Model1_tree_2.R")
+mod.c2 <- model
+load("/Volumes/USB DISK/Class v volant/Model1_tree_3.R")
+mod.c3 <- model
+load("/Volumes/USB DISK/Class v volant/Model1_tree_4.R")
+mod.c4 <- model
+load("/Volumes/USB DISK/Class v volant/Model1_tree_5.R")
+mod.c5 <- model
+load("/Volumes/USB DISK/Class v volant/Model1_tree_6.R")
+mod.c6 <- model
+load("/Volumes/USB DISK/Class v volant/Model1_tree_7.R")
+mod.c7 <- model
+load("/Users/kevinhealy/Desktop/Longevity paper/Final model ouputs/Full models 1.500/Model1_tree_1.R")
+mod.1 <- model
+load("/Users/kevinhealy/Desktop/Longevity paper/Final model ouputs/Full models 1.500/Model1_tree_2.R")
+mod.2 <- model
+load("/Users/kevinhealy/Desktop/Longevity paper/Final model ouputs/Full models 1.500/Model1_tree_3.R")
+mod.3 <- model
+load("/Users/kevinhealy/Desktop/Longevity paper/Final model ouputs/Full models 1.500/Model1_tree_4.R")
+mod.4 <- model
+load("/Users/kevinhealy/Desktop/Longevity paper/Final model ouputs/Full models 1.500/Model1_tree_5.R")
+mod.5 <- model
+load("/Users/kevinhealy/Desktop/Longevity paper/Final model ouputs/Full models 1.500/Model1_tree_6.R")
+mod.6 <- model
+load("/Users/kevinhealy/Desktop/Longevity paper/Final model ouputs/Full models 1.500/Model1_tree_7.R")
+mod.7 <- model
+AIC(mod.7)
+aic(mod.7)
+AIC(mod.7)
+library(mcmcglmm\)
+library(mcmcglmm)
+library(MCMCglmm)
+AIC(mod.7)
+summary(mod.7)
+DIC(mod.7)
+DIC(mod.c7)
+summary(mod.c7)
+mod.c7$DIC
+mod.c7$DIC - mod.c7$DIC
+mod.7$DIC - mod.c7$DIC
+mod.1$DIC - mod.c1$DIC
+mod.2$DIC - mod.c1$DIC
+mod.2$DIC - mod.c2$DIC
+mod.3$DIC - mod.c2$DIC
+mod.3$DIC - mod.c3$DIC
+mod.4$DIC - mod.c4$DIC
+mod.5$DIC - mod.c5$DIC
+mod.6$DIC - mod.c6$DIC
+summary(mod.c6$DIC)
+summary(mod.c6)
+summary(mod.6)
+load("/Users/kevinhealy/Desktop/Class v volant/Model1_tree_1.R")
+nn <- model
+summary(nn)
+summary(mod.1)
+read.tree(text="(bear:cat);")
+library("ape")
+read.tree(text="(bear:cat);")
+read.tree(text="((hyrax:elephant));")
+read.tree(text="((hyrax:elephant):cat);")
+tree <- read.tree(text="((hyrax:elephant):cat);")
+plot(tree)
+tree <- read.tree(text="((hyrax:elephant):(cat));")
+tree <- read.tree(text="[[hyrax:elephant]:[cat]];")
+tree <- read.tree(text="((hyrax,elephant),cat);")
+tree
+plot(tree)
+tree <- read.tree(text="((echidna),((Hyrax,elephant),((pangolin,hippo),rabbit)));")
+tree <- read.tree(text="((Echidna),((Hyrax,Elephant),((Pangolin,Hippo),Rabbit)));")
+tree <- read.tree(text="((Echidna),((Hyrax,Elephant),((Pangolin,Hippo),Armadillo)));")
+2.20*2*5*4
+2.40*2*5*4
+2.24*2*5*4
+2.40*2*5*4
+2.80*2*5*4
+31*1000
+1000*1000
+1000*1000*31
+4*(10^7)
+(4*(10^7))/25000
+((4*(10^7))/25000)/365
+(((4*(10^7))/25000)/365)*2500
+(((4*(10^7))/25000)/365)*2500/70
+(((4*(10^7))/25000)/365)*2500)/70
+(((4*(10^7))/25000)/365)*2500/70
+(((4*(10^7))/25000)/365)*2500/200
+(((4*(10^7))/25000)/365)*2500/300
+((((4*(10^7))/25000)/365)*2500/300)*7
+rm(list=ls())#
+graphics.off()#
+# load packages#
+library(MCMCglmm)#
+library(modeest)#
+library(ape)#
+library(caper)#
+source("MultiTreePGLS_v1.4.f.R")#
+#data in full warts and all#
+data.full <- read.csv('LongevityData_master_14_jan.csv', sep =",", header =T)
+data in full warts and all#
+data.full <- read.csv('LongevityData_master_14_jan.csv', sep =",", header =T)#
+#to take into account the four species Corvus_cornix, Hydrobates_waterus (Hydrobates_pelagicus), Phalacrocorax_waterus (Phalacrocorax_pelagicus), Chaetura_watera (Chaetura_pelagica) which seem to be synonoms or somthing. Also Chaetura_pelagica seems to not be in the phylo tree for some reason? These were removed for now.#
+data.fullt <- data.full[data.full$Binomial!= "Hydrobates_pelagicus" & data.full$Binomial!="Corvus_cornix" & data.full$Binomial!= "Phalacrocorax_pelagicus" & data.full$Binomial!= "Chaetura_pelagica",]#
+#data removed including; poor quality BMR data removed (poor)(according to Mck & Wolf), con refers to BMR values which I calculated using 20j conversion factor from White et al 2007, tiny (<10) and qeustionable longevity data and all aquatic species (this does not incule species which forage aquatically)#
+data.mm <- data.fullt[data.fullt$Aquatic!= "aquatic" & data.fullt$SampleSize != "tiny" & data.fullt$DataQuality !="questionable" & data.fullt$DataQuality !="low" & data.fullt$BMR.data.quality != "poor" & data.fullt$BMR.data.quality != "fair" & data.fullt$BMR.data.quality != "con",]#
+#Creat a dataframe including only the relative terms#
+data.m1 <- data.frame(data.mm$Class,data.mm$Binomial,data.mm$daily.activity,data.mm$Volant,data.mm$MaxLongevity_years,data.mm$AdultBodyMass_g, data.mm$Fossorial, data.mm$SampleSize, data.mm$DataQuality, data.mm$foraging.fix, data.mm$BMR.W.g, data.mm$BMR.data.quality)#
+#Remove NAs#
+data.omit.m <- na.omit(data.m1)#
+#Make sure all empty spaces are removed in daily activity, foraging, fossorial and BMR quatliy#
+#Also remove gliding species and Humans#
+data.omit.m <- data.omit.m[data.omit.m$data.mm.daily.activity != "" & data.omit.m$data.mm.foraging.fix != "" & data.omit.m$data.mm.Fossorial != "" & data.omit.m$data.mm.Volant != "gliding" & data.omit.m$data.mm.Binomial != "Homo_sapiens" & data.omit.m$data.mm.BMR.data.quality != "",]#
+#
+#This is if you want to exclude from the comlet analysis or just from the volant subsample one#
+#data.omit.m <- data.omit.m[data.omit.m$data.mm.daily.activity != "" & data.omit.m$data.mm.foraging.fix != "" & data.omit.m$data.mm.Fossorial != "" & data.omit.m$data.mm.Volant != "gliding" & data.omit.m$data.mm.Binomial != "Homo_sapiens" & data.omit.m$data.mm.BMR.data.quality != "" & data.omit.m$data.mm.daily.activity != "cathemeral" & data.omit.m$data.mm.daily.activity != "crepuscular",]#
+#this line changes semi-aquatic to aquatic #
+data.omit.m[data.omit.m$data.mm.foraging.fix == "semiaquatic", "data.mm.foraging.fix"] <- "aquatic"#
+#the varibles to be read into the models change to log 10 and mean centered in units of sd.#
+BMR.q <- data.omit.m$data.mm.BMR.data.quality#
+BMR.q <- factor(BMR.q, levels =c("good","fair"))#
+long.samp.size <- data.omit.m$data.mm.SampleSize#
+long.samp.size <- factor(long.samp.size)#
+long.data.q <- data.omit.m$data.mm.DataQuality#
+long.data.q <- factor(long.data.q)#
+forage.m <- data.omit.m$data.mm.foraging.fix#
+forage.m <- factor(forage.m, levels=c("terrestrial","volant","arboreal","semiarboreal","aquatic"))#
+fossorial.m <- data.omit.m$data.mm.Fossorial#
+fossorial.m <- factor(fossorial.m,levels=c("nonfossorial","fossorial","semifossorial"))#
+volant.m <- data.omit.m$data.mm.Volant#
+volant.m <- factor(volant.m, levels=c("nonvolant","volant"))#
+species.m <- data.omit.m$data.mm.Binomial#
+noct.m <- data.omit.m$data.mm.daily.activity#
+noct.m <- factor(noct.m, levels = c("diurnal","cathemeral","crepuscular","nocturnal"))#
+long.m <- log10(data.omit.m$data.mm.MaxLongevity_years)#
+long.m <- (long.m - mean(long.m))/(sd(long.m))#
+mass.m <- log10(data.omit.m$data.mm.AdultBodyMass_g)#
+mass.m <- (mass.m - mean(mass.m))/(sd(mass.m))#
+BMR <- log10(data.omit.m$data.mm.BMR.W.g)#
+BMR <- (BMR - mean(BMR))/(sd(BMR))#
+animal <- species.m#
+class.m <- data.omit.m$data.mm.Class#
+#
+#creat tidier data base to read from in MCMC function with mean standardised data#
+data.fix <- data.frame(species.m,animal,class.m,long.m,mass.m,BMR,noct.m,volant.m,fossorial.m,forage.m,BMR.q)
+rm(list=ls())#
+graphics.off()#
+# load packages#
+library(MCMCglmm)#
+library(modeest)#
+library(ape)#
+library(caper)#
+source("MultiTreePGLS_v1.4.f.R")#
+#data in full warts and all#
+data.full <- read.csv('LongevityData_master_14_jan.csv', sep =",", header =T)#
+#to take into account the four species Corvus_cornix, Hydrobates_waterus (Hydrobates_pelagicus), Phalacrocorax_waterus (Phalacrocorax_pelagicus), Chaetura_watera (Chaetura_pelagica) which seem to be synonoms or somthing. Also Chaetura_pelagica seems to not be in the phylo tree for some reason? These were removed for now.#
+data.fullt <- data.full[data.full$Binomial!= "Hydrobates_pelagicus" & data.full$Binomial!="Corvus_cornix" & data.full$Binomial!= "Phalacrocorax_pelagicus" & data.full$Binomial!= "Chaetura_pelagica",]#
+#data removed including; poor quality BMR data removed (poor)(according to Mck & Wolf), con refers to BMR values which I calculated using 20j conversion factor from White et al 2007, tiny (<10) and qeustionable longevity data and all aquatic species (this does not incule species which forage aquatically)#
+data.mm <- data.fullt[data.fullt$Aquatic!= "aquatic" & data.fullt$SampleSize != "tiny" & data.fullt$DataQuality !="questionable" & data.fullt$DataQuality !="low" & data.fullt$BMR.data.quality != "poor" & data.fullt$BMR.data.quality != "fair" & data.fullt$BMR.data.quality != "con",]#
+#Creat a dataframe including only the relative terms#
+data.m1 <- data.frame(data.mm$Class,data.mm$Binomial,data.mm$daily.activity,data.mm$Volant,data.mm$MaxLongevity_years,data.mm$AdultBodyMass_g, data.mm$Fossorial, data.mm$SampleSize, data.mm$DataQuality, data.mm$foraging.fix, data.mm$BMR.W.g, data.mm$BMR.data.quality)#
+#Remove NAs#
+data.omit.m <- na.omit(data.m1)#
+#Make sure all empty spaces are removed in daily activity, foraging, fossorial and BMR quatliy#
+#Also remove gliding species and Humans#
+data.omit.m <- data.omit.m[data.omit.m$data.mm.daily.activity != "" & data.omit.m$data.mm.foraging.fix != "" & data.omit.m$data.mm.Fossorial != "" & data.omit.m$data.mm.Volant != "gliding" & data.omit.m$data.mm.Binomial != "Homo_sapiens" & data.omit.m$data.mm.BMR.data.quality != "",]#
+#
+#This is if you want to exclude from the comlet analysis or just from the volant subsample one#
+#data.omit.m <- data.omit.m[data.omit.m$data.mm.daily.activity != "" & data.omit.m$data.mm.foraging.fix != "" & data.omit.m$data.mm.Fossorial != "" & data.omit.m$data.mm.Volant != "gliding" & data.omit.m$data.mm.Binomial != "Homo_sapiens" & data.omit.m$data.mm.BMR.data.quality != "" & data.omit.m$data.mm.daily.activity != "cathemeral" & data.omit.m$data.mm.daily.activity != "crepuscular",]#
+#this line changes semi-aquatic to aquatic #
+data.omit.m[data.omit.m$data.mm.foraging.fix == "semiaquatic", "data.mm.foraging.fix"] <- "aquatic"#
+#the varibles to be read into the models change to log 10 and mean centered in units of sd.#
+BMR.q <- data.omit.m$data.mm.BMR.data.quality#
+BMR.q <- factor(BMR.q, levels =c("good","fair"))#
+long.samp.size <- data.omit.m$data.mm.SampleSize#
+long.samp.size <- factor(long.samp.size)#
+long.data.q <- data.omit.m$data.mm.DataQuality#
+long.data.q <- factor(long.data.q)#
+forage.m <- data.omit.m$data.mm.foraging.fix#
+forage.m <- factor(forage.m, levels=c("terrestrial","volant","arboreal","semiarboreal","aquatic"))#
+fossorial.m <- data.omit.m$data.mm.Fossorial#
+fossorial.m <- factor(fossorial.m,levels=c("nonfossorial","fossorial","semifossorial"))#
+volant.m <- data.omit.m$data.mm.Volant#
+volant.m <- factor(volant.m, levels=c("nonvolant","volant"))#
+species.m <- data.omit.m$data.mm.Binomial#
+noct.m <- data.omit.m$data.mm.daily.activity#
+noct.m <- factor(noct.m, levels = c("diurnal","cathemeral","crepuscular","nocturnal"))#
+long.m <- log10(data.omit.m$data.mm.MaxLongevity_years)#
+long.m <- (long.m - mean(long.m))/(sd(long.m))#
+mass.m <- log10(data.omit.m$data.mm.AdultBodyMass_g)#
+mass.m <- (mass.m - mean(mass.m))/(sd(mass.m))#
+BMR <- log10(data.omit.m$data.mm.BMR.W.g)#
+BMR <- (BMR - mean(BMR))/(sd(BMR))#
+animal <- species.m#
+class.m <- data.omit.m$data.mm.Class#
+#
+#creat tidier data base to read from in MCMC function with mean standardised data#
+data.fix.m <- data.frame(species.m,animal,class.m,long.m,mass.m,BMR,noct.m,volant.m,fossorial.m,forage.m,BMR.q)
+tree <- read.nexus("mabir1")
+data.fix.m
+write.csv(data.fix.m)
+write.csv(data.fix.m.csv)
+write.csv("data.fix.m.csv")
+write.csv(data.fix.m.csv)
+write.csv(data.fix.m)
+?write.csv(data.fix.m)
+write.table(data.fix.m.csv)
+write.table(data.fix.m)
+write.table(data.fix.m, file="data")
+write.csv(data.fix.m, file="data")
+write.csv(data.fix.m, file="data")
+tree <- read.tree("MamBir2495t_Chrono_1000x.tre")#this gives a multiphylo object with 100 trees #I need to update this to the one with 1000 trees#
+##Removing tips from the tree (taxa with <NA>)#
+#tree <- read.nex
+tree <- read.tree("MamBir2495t_Chrono_1000x.tre")#this gives a multiphylo object with 100 trees #I need to update this to the one with 1000 trees
+tree.match.m <- matrix(0,nrow = 1000)		#
+mtr.m <- list()#
+for(i in 1:1000){#
+		tree1<- tree[[i]]#
+		species.tree <- tree1$tip.label#
+		spec.omit.m <- data.omit.m[,2]#
+		a.m<-spec.omit.m[match(species.tree, spec.omit.m)]#
+		droptip.m<-which(is.na(a.m))#
+		mtr.m[[i]]<-drop.tip(tree1,droptip.m)#
+##check#
+		mtr.mc <- mtr.m[[i]]#
+		tipl.m<-mtr.mc$tip.label#
+tree.tip.match.m <- sort(tipl.m) == sort(spec.omit.m)#
+for(t in 1:(length(tipl.m))){#
+if(tree.tip.match.m[t] == "False") tree.match.m[i] <- "False"#
+}#
+if(tree.match.m[i] != "False") tree.match.m[i] <- "True" #where i is the tree number#
+}
+trees <- mtr.m[1:10]
+write.tree(trees, file="trees")
+trees
+write(trees, file="trees")
+class(trees)
+class(trees) <- MultiPhylo
+class(trees) <- "multiPhylo"
+class(tree)
+write.tree(trees, file="trees")
+write.tree(trees, file="trees")
+trees <- mtr.m[1:30]
+class(trees) <- "multiPhylo"
+write.tree(trees, file="trees")
+tr <- read.nexus("trees")
+tr <- read.nexus("trees")
+tr <- read.nexus("trees")
+tr <- read.nexus(trees)
+tr <- read.nexus("trees.tre")
+tr
+tr <- read.nexus("trees.tre")
+tr <- read.nexus(trees.tre)
+rm(list=ls())#
+graphics.off()#
+# load packages#
+library(MCMCglmm)#
+library(modeest)#
+library(ape)#
+library(caper)#
+source("MultiTreePGLS_v1.4.f.R")#
+#
+#data in full warts and all#
+data.full <- read.csv('data.csv', sep =",", header =T)
+tree <- read.tree("trees.tre")#this gives a multiphylo object with 100 trees #I need to update this to the one with 1000 trees
+tree
+source("MultiTreePGLS_v1.4.f.R")
+data.frame <- data
+data.frame
+data.frame <- data
+data.frame
+data
+data <- read.csv('data.csv', sep =",", header =T)
+data
+data.frame <- data
+species.col <- "species.m"
+formula <- long.m~BMR + mass.m + volant.m + mass.m:volant.m
+trees <- read.tree("trees.tre")#this gives a multiphylo object with 100 trees #I need to update this to the one with 1000 trees
+trees <- trees
+data.frame <- data#
+species.col <- "species.m"#
+formula <- long.m~BMR + mass.m + volant.m + mass.m:volant.m#
+trees <- trees#
+opt_ngen <- 60#
+thin_n <- 2#
+opt_converge <- 1.1#
+framework <- "Bayesian"
+MultiTreePGLS(data.frame, species.col, formula, trees, output="Model1", framework = framework, opt_ngen, opt_converge, thin_n)
+data.frame <- data#
+species.col <- "species.m"#
+formula <- long.m~BMR + mass.m + volant.m + mass.m:volant.m#
+trees <- trees#
+opt_ngen <- 1000#
+thin_n <- 1#
+opt_converge <- 1.1#
+framework <- "Bayesian"#
+#
+#run the models#
+MultiTreePGLS(data.frame, species.col, formula, trees, output="Model1", framework = framework, opt_ngen, opt_converge, thin_n)
+data.frame <- data#
+species.col <- "species.m"#
+formula <- long.m~BMR + mass.m + volant.m + mass.m:volant.m#
+trees <- trees#
+opt_ngen <- 1000#
+thin_n <- 6#
+opt_converge <- 1.1#
+framework <- "Bayesian"#
+#
+#run the models#
+MultiTreePGLS(data.frame, species.col, formula, trees, output="Model1", framework = framework, opt_ngen, opt_converge, thin_n)
+data.frame <- data#
+species.col <- "species.m"#
+formula <- long.m~BMR + mass.m + volant.m + mass.m:volant.m#
+trees <- trees#
+opt_ngen <- 1000#
+thin_n <- 50#
+opt_converge <- 1.1#
+framework <- "Bayesian"#
+#
+#run the models#
+MultiTreePGLS(data.frame, species.col, formula, trees, output="Model1", framework = framework, opt_ngen, opt_converge, thin_n)
