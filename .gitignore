@@ -1,0 +1,15 @@
+# LaTeX #
+*.pdf
+*.aux
+*.bbl
+*.blg
+*.dvi
+*.fff
+*.lof
+*.lot
+*.out
+*.toc
+*.ttt
+*.fdb_latexmk
+*.fls
+
