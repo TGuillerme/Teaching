@@ -1,0 +1,50 @@
+\documentclass{article} % Setting the class of the document
+
+\begin{document} % starting the document
+
+%This will be ignored.
+
+This will not be ignored.
+
+\% This won't be ignored either. % Note the backslash that ignores the character (ignore ignore!)
+
+Also,
+note
+that
+it doesn'
+t
+matter                   whether
+I
+    format that really weirdly.
+% To start a new line, just add an empty line
+
+new line!
+% Or you can use commands like 
+\newline
+That also creates a new line
+%Commands are useful formating "tags" that allow to modify the raw text.
+\newline
+Commands always start with backslash ($\backslash$) %Note that backslash is a special character for starting commands.
+%So if I actually want to print this character, I have to use a command.
+
+%Because it's a command for a special character, I have to "protect it" between "$" signs.
+Some commands don't need an input like $\backslash$noindent % note that quotes are specific here (double opening `` and double closing '')
+
+\noindent that removes the indent at the start of a new line (like $\backslash$newline).
+
+
+Some other commands take some input like the commands for \textit{italicizing} and \textbf{bolding} the text.
+Or even some other that can bring a bit of structure:
+\section{Some structure is needed!}
+We covered the followings:
+
+\begin{enumerate} %And finally there exists some commands that begin/end some other ones (like in this case "enumerate")
+\item Ignored comments with \%
+\item The unimportance of the text format (focus on the content!)
+\item \textbf{Some} \textit{basic} \texttt{commands} %with \texttt (3 t's at the end) that puts the text in courier font.
+\end{enumerate}
+
+\subsection*{Now try to play around with all that and restructure all this} % \subsection creates a new hierarchical level and * just after tells latex to ignore the numbering (skip) of this new level
+
+
+\end{document} % Ending the document (don't forget this one!)

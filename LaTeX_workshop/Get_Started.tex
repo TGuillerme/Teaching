@@ -1,0 +1,62 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{natbib}
+\usepackage{enumerate}
+\usepackage[osf]{mathpazo}
+\usepackage{lastpage}
+\usepackage{url}
+\usepackage{hyperref}
+\pagenumbering{arabic}
+\linespread{1.66}
+
+\begin{document}
+
+\begin{flushright}
+Version dated: \today
+\end{flushright}
+\begin{center}
+
+%Title
+\noindent{\Large{\bf{Getting started with \LaTeX}}}\\
+\bigskip
+%Author
+Thomas Guillerme\\\href{mailto:t.guillerme@imperial.ac.uk}{t.guillerme@imperial.ac.uk}
+
+\end{center}
+
+\section{Install your favourite text editor}
+You can use pretty much any text editor depending on your machine and your preferences.
+Be aware though that often, some plugins/packages are necessary to make LaTeX run smoothly.
+
+There are many like the universal multiplatform \href{http://texstudio.sourceforge.net/}{\textbf{TeXStudio}}, \href{http://www.tug.org/mactex/index.html}{\textbf{MacTeX}} for Mac or \href{http://miktex.org/}{\textbf{MikTeX}} for Windows (just google \texttt{LaTeX editor}).
+However, I personally prefer \textbf{Sublime Text 2} that is multi-platform, way less RAM and memory demanding and does combine really well with some other languages you are working with (\texttt{R} for example!).
+
+\section{Installing LaTeX on Sublime Text 2}
+\subsection{Getting the softwares}
+\begin{itemize}
+\item \textbf{Sublime Text 2}: the text editor (\url{http://www.sublimetext.com/2}).
+\item \textbf{A pdf viewer}: I suggest \href{http://skim-app.sourceforge.net/}{\textbf{Skim}} for Mac or \href{http://www.sumatrapdfreader.org/download-free-pdf-viewer.html}{\textbf{Sumatra}} for Windows.
+\end{itemize}
+
+\subsection{Installing LaTeX on Sublime}
+\begin{itemize}
+\item Download and install \href{https://packagecontrol.io/}{\textbf{package control}}.
+\item Open \texttt{Sublime Text 2}.
+\item Go in the \texttt{Tools} menu and select \texttt{Command Palette...}.
+\item Type in \texttt{Package Control: Install Package} and press \texttt{Enter}.
+\item Type in \texttt{LaTeXing} %Or \texttt{LaTeX tools?}
+and press \texttt{Enter} (\href{https://github.com/SublimeText/LaTeXTools/blob/master/README.markdown}{info on LaTeX tools}).
+\end{itemize}
+
+\subsection{Synchronising Skim}
+Open Skim then go into the \texttt{Preferences} menu, then \texttt{Sync} and set \texttt{preset} to \texttt{Sublime Text 2}.
+
+\section{Some useful links}
+\begin{itemize}
+\item \url{https://en.wikibooks.org/wiki/LaTeX}
+\item \url{http://google.com/}
+\end{itemize}
+And that covers pretty much everything!
+LaTeX is a language used and polished since the last 30 years so there is always an easy answer to your \href{http://lmgtfy.com/?q=How+to+make+a+macro+for+a+table+environment+in+latex}{complex questions}!
+
+\end{document}
